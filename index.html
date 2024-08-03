@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta name="description" content="A dedicated team of specialists, delivering remarkable work to our clients worldwide!" />
+<meta property="og:description" content="A dedicated team of specialists, delivering remarkable work to our clients worldwide!" />
+<meta property="og:type" content="website" />
+<link rel="apple-touch-icon" sizes="180x180" href="Logo-final.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Golos+Text:wght@400..900">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColourFit - Best Marketing Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Logo-final.png" alt="Colour Fits Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Why Admyize?</a></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+            <button class="chat-now">Chat Now</button>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Client section scroll interaction
+    const clients = document.querySelectorAll('.client');
+    let currentIndex = 0;
+
+    function showClient(index) {
+        clients.forEach((client, i) => {
+            const textContainer = client.querySelector('.text-container');
+            if (i === index) {
+                client.classList.add('active');
+                textContainer.classList.add('active');
+            } else {
+                client.classList.remove('active');
+                textContainer.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const scrollIndex = Math.floor(scrollTop / windowHeight);
+
+        if (scrollIndex !== currentIndex && scrollIndex < clients.length) {
+            currentIndex = scrollIndex;
+            showClient(currentIndex);
+        }
+    });
+
+    showClient(currentIndex); // Show the first client text initially
+
+    // Burger menu toggle interaction
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('toggle');
+    });
+});
+
+    </script>
+    <main>
+        <section class="hero">
+            <h1>Difficult to Grow <br>Your <span class="highlight">Business ?</span></h1>
+            <p style="font-size: 22px; margin:20px ;">3+ years | 50+ Brands | 35+ Crore Ad spent<br>A dedicated team of specialists, delivering remarkable work to our clients worldwide!</p>
+            <button class="ctar">Book a Strategy Call</button>
+            <p style="font-size: 20px; margin: 2rem; color: #000 ;">Our Performance Marketing Services are Certified by</p>
+
+            <div class="certifications">
+                <img src="stripgoogle.png" alt="Certifications Strip">
+                <p style="font-size: 20px; margin: 2rem; color: #000 ;">
+
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                    const heroSection = document.querySelector('.hero');
+            
+                    function checkPosition() {
+                        const rect = heroSection.getBoundingClientRect();
+                        const windowHeight = window.innerHeight;
+                        const scrollPosition = window.scrollY || window.pageYOffset;
+            
+                        if (scrollPosition > rect.top - windowHeight / 2) {
+                            heroSection.classList.add('zoom-out');
+                        } else {
+                            heroSection.classList.remove('zoom-out');
+                        }
+                    }
+            
+                    window.addEventListener('scroll', checkPosition);
+                    checkPosition(); // Run on initial load
+                });
+            </script>
+            
+            
+        </section>
+        <section class="features-section flex flex-col items-center justify-center transition-all rounded-30 shadow-md bg-white py-40" id="features">
+            <div class="max-w-full absolute top-80 z-0 ltr-left-0">
+            </div>
+            <div class="content-wrapper w-full relative flex flex-col items-center justify-center gap-20 p-10 border-bottom border-black-10">
+                <div class="image-container lqd-imggrp-single block relative" data-float="ease">
+                    <div class="img-wrap inline-flex relative items-center justify-center">
+                        <figure class="w-full relative">
+                            <img loading="lazy" width="47" height="47" src="new.svg" alt="features">
+                        </figure>
+                    </div>
+                </div>
+                <div class="heading-wrapper relative max-w-full text-center sm:w-full">
+                    <h2 class="heading ld-gradient-heading bg-transparent mb-0/2em pb-0/2em"
+                        style=".gradient-text {
+                            font-size: 36px;
+                            font-weight: bold;
+                            background: linear-gradient(rgb(127, 91, 196) 0%, rgb(96, 163, 230) 100%);
+                            -webkit-background-clip: text;
+                            color: transparent;
+                        }">
+                        Our Services
+                    </h2>
+                </div>
+                <div class="services-wrapper flex flex-wrap justify-around p-10">
+                    <!-- Service Box 1 -->
+                    <div class="service-box flex flex-grow-1 relative mb-30">
+                        <div class="iconbox-icon-wrap mr-25">
+                            <div class="iconbox-icon-container inline-flex text-40 text-primary">
+                                <!-- SVG Icon -->
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
+                                <span>Strategic Marketing</span>
+                                <!-- Arrow Icon -->
+                            </h3>
+                            <p class="mb-0 text-12 font-medium leading-16 text-slate-600">
+                                Catapult your brand into the spotlight with our genius strategies – it's like magic, but for marketing.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Service Box 2 -->
+                    <div class="service-box flex flex-grow-1 relative mb-30">
+                        <div class="iconbox-icon-wrap mr-25">
+                            <div class="iconbox-icon-container inline-flex text-40 text-primary">
+                                <!-- SVG Icon -->
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
+                                <span>Social Media Management</span>
+                                <!-- Arrow Icon -->
+                            </h3>
+                            <p class="mb-0 text-12 font-medium leading-16 text-slate-600">
+                                Hands-free social success! While you focus on your cat videos, we'll make sure your brand shines across all social platforms.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Add more service boxes as needed -->
+                </div>
+            </div>
+            <div class="services-wrapper flex flex-wrap justify-around p-10">
+                <!-- Service Box 1 -->
+                <div class="service-box flex flex-grow-1 relative mb-30">
+                    <div class="iconbox-icon-wrap mr-25">
+                        <div class="iconbox-icon-container inline-flex text-40 text-primary">
+                            <!-- SVG Icon -->
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
+                            <span>Strategic Marketing</span>
+                            <!-- Arrow Icon -->
+                        </h3>
+                        <p class="mb-0 text-12 font-medium leading-16 text-slate-600">
+                            Catapult your brand into the spotlight with our genius strategies – it's like magic, but for marketing.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service Box 2 -->
+                <div class="service-box flex flex-grow-1 relative mb-30">
+                    <div class="iconbox-icon-wrap mr-25">
+                        <div class="iconbox-icon-container inline-flex text-40 text-primary">
+                            <!-- SVG Icon -->
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
+                            <span>Social Media Management</span>
+                            <!-- Arrow Icon -->
+                        </h3>
+                        <p class="mb-0 text-12 font-medium leading-16 text-slate-600">
+                            Hands-free social success! While you focus on your cat videos, we'll make sure your brand shines across all social platforms.
+                        </p>
+                    </div>
+                </div>
+                <!-- Add more service boxes as needed -->
+            </div>
+        </div>
+        <div class="services-wrapper flex flex-wrap justify-around p-10">
+            <!-- Service Box 1 -->
+            <div class="service-box flex flex-grow-1 relative mb-30">
+                <div class="iconbox-icon-wrap mr-25">
+                    <div class="iconbox-icon-container inline-flex text-40 text-primary">
+                        <!-- SVG Icon -->
+                    </div>
+                </div>
+                <div class="content">
+                    <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
+                        <span>Strategic Marketing</span>
+                        <!-- Arrow Icon -->
+                    </h3>
+                    <p class="mb-0 text-12 font-medium leading-16 text-slate-600">
+                        Catapult your brand into the spotlight with our genius strategies – it's like magic, but for marketing.
+                    </p>
+                </div>
+            </div>
+            <!-- Service Box 2 -->
+            <div class="service-box flex flex-grow-1 relative mb-30">
+                <div class="iconbox-icon-wrap mr-25">
+                    <div class="iconbox-icon-container inline-flex text-40 text-primary">
+                        <!-- SVG Icon -->
+                    </div>
+                </div>
+                <div class="content">
+                    <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
+                        <span>Social Media Management</span>
+                        <!-- Arrow Icon -->
+                    </h3>
+                    <p class="mb-0 text-12 font-medium leading-16 text-slate-600">
+                        Hands-free social success! While you focus on your cat videos, we'll make sure your brand shines across all social platforms.
+                    </p>
+                </div>
+            </div>
+            <!-- Add more service boxes as needed -->
+        </div>
+    </div>
+        </section>
+        
+</main>
+<section>
+    <div class="container">
+        <div class="image-box">
+            <img src="Startgic Marketing.gif" alt="Uploaded Image">
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <span class="badge">ADS • ADS • ADS</span>
+                <h2>Strategic Marketing</h2>
+            </div>
+            <p>
+                Ready to give your brand the spotlight it deserves? Dive into our Paid Ads extravaganza and let your message shine in the digital universe!
+            </p>
+            <div class="buttons">
+                <button class="button">Facebook Ads</button>
+                <button class="button">Google Ads</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="content-header">
+                <span class="badge">DESIGN • DESIGN • DESIGN</span>
+                <h2>Eye-catchy Designs</h2>
+            </div>
+            <p>
+                We craft visuals that speak to your ideal customers. Ready for an extraordinary brand transformation?
+            </p>
+            <div class="buttons">
+                <button class="button">Social Media</button>
+                <button class="button">Ads</button>
+                <button class="button">Videos</button>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="Eye Catchy Designs.gif" alt="Uploaded Image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-box">
+            <img src="Social Media.gif" alt="Uploaded Image">
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <span class="badge">ADS • ADS • ADS</span>
+                <h2>Strategic Marketing</h2>
+            </div>
+            <p>
+                Ready to give your brand the spotlight it deserves? Dive into our Paid Ads extravaganza and let your message shine in the digital universe!
+            </p>
+            <div class="buttons">
+                <button class="button">Facebook Ads</button>
+                <button class="button">Google Ads</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="content-header">
+                <span class="badge">DESIGN • DESIGN • DESIGN</span>
+                <h2>Eye-catchy Designs</h2>
+            </div>
+            <p>
+                We craft visuals that speak to your ideal customers. Ready for an extraordinary brand transformation?
+            </p>
+            <div class="buttons">
+                <button class="button">Social Media</button>
+                <button class="button">Ads</button>
+                <button class="button">Videos</button>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="Automation.gif" alt="Uploaded Image">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image-box">
+            <img src="Web Development.gif" alt="Uploaded Image">
+        </div>
+        <div class="content">
+            <div class="content-header">
+                <span class="badge">ADS • ADS • ADS</span>
+                <h2>Strategic Marketing</h2>
+            </div>
+            <p>
+                Ready to give your brand the spotlight it deserves? Dive into our Paid Ads extravaganza and let your message shine in the digital universe!
+            </p>
+            <div class="buttons">
+                <button class="button">Facebook Ads</button>
+                <button class="button">Google Ads</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="content-header">
+                <span class="badge">DESIGN • DESIGN • DESIGN</span>
+                <h2>Eye-catchy Designs</h2>
+            </div>
+            <p>
+                We craft visuals that speak to your ideal customers. Ready for an extraordinary brand transformation?
+            </p>
+            <div class="buttons">
+                <button class="button">Social Media</button>
+                <button class="button">Ads</button>
+                <button class="button">Videos</button>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="Website SEO.gif" alt="Uploaded Image">
+        </div>
+    </div>
+    <style>
+        .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 50px auto;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease-in-out;
+    flex-wrap: wrap;
+}
+
+/* Image Box Styling */
+.image-box {
+    flex: 1;
+    max-width: 400px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+/* Image Box Content Styling */
+.image-box img {
+    max-width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-box img:hover {
+    transform: scale(1.05);
+}
+
+/* Content Styling */
+.content {
+    flex: 1.5;
+    text-align: left; /* Align all content to the left */
+    padding-left: 20px;
+}
+
+/* Content Header Styling */
+.content-header {
+    margin-bottom: 20px;
+}
+
+/* Badge Styling */
+.badge {
+    background-color: #e0e0e0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    color: #555;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 2.2em;
+    color: #555;
+    margin: 10px 0;
+    background: linear-gradient(to right, blue, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Paragraph Styling */
+p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    font-size: 1.2em; /* Larger paragraph text */
+    margin-bottom: 30px; /* Increased space between paragraph and buttons */
+}
+
+/* Buttons Container Styling */
+.buttons {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the left */
+    padding-top: 50px;
+    gap: 15px;
+}
+
+/* Button Styling */
+.button {
+    background-color: #f0f0f0;
+    color: #555;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ddd;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .content {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .image-box {
+        max-width: 100%;
+        margin-top: 20px;
+        padding-right: 0;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: flex-start; /* Align buttons to the left */
+    }
+
+    .button {
+        width: 100%;
+    }
+
+    /* Move image between paragraph and buttons */
+    .content-header {
+        order: 1; /* Move content header above the image */
+        margin-bottom: 20px;
+    }
+
+    .image-box {
+        order: 2; /* Move image between content and buttons */
+    }
+
+    .buttons {
+        order: 3; /* Ensure buttons come after the image */
+    }
+}
+
+@media (max-width: 490px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em; /* Adjusted paragraph font size for smaller screens */
+    }
+
+    .button {
+        padding: 8px 15px;
+        font-size: 0.9em; /* Slightly smaller button text */
+    }
+
+    /* Move image between paragraph and buttons */
+    .content-header {
+        text-align: center;
+        order: 1; /* Move content header above the image */
+        margin-bottom: 20px;
+    }
+
+    .image-box {
+        order: 2; /* Move image between content and buttons */
+        margin-top: 20px;
+    }
+
+    .buttons {
+        order: 3; /* Ensure buttons come after the image */
+        flex-direction: column;
+        gap: 8px; /* Adjust gap between buttons */
+    }
+}
+
+    </style>
+</section>
+
+            <style>
+             .testimonial-container {
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 30px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #4a90e2; /* Blue color */
+            margin-bottom: 20px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        .testimonial-title::after {
+            content: "";
+            display: block;
+            height: 5px;
+            width: 100px;
+            background-color: #9b59b6; /* Purple color */
+            margin: 10px auto 0;
+            border-radius: 5px;
+        }
+
+        .clients-section {
+            padding: 30px 20px;
+        }
+
+        .client-row {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .client-row.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .client-row:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .client-text, .client-image {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .client-text {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 20px; /* Adjust as needed */
+        }
+
+        .client-image {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 20px; /* Adjust as needed */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .client-text h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .client-text p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .client-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .client-row {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .client-row:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .client-image, .client-text {
+                padding: 10px;
+            }
+
+            .client-text h2 {
+                font-size: 1.5em;
+            }
+
+            .client-text p {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 490px) {
+            .clients-section {
+                padding: 30px 10px;
+            }
+
+            .client-text h2 {
+                font-size: 1.2em;
+            }
+
+            .client-text p {
+                font-size: 0.9em;
+            }
+
+            .client-image img {
+                max-width: 300px;
+            }
+        }
+    </style>
+    <style>
+     .testimonial-container {
+        padding: 10px;
+        border-radius: 20px;
+        max-width: 1100px;
+        margin: 50px auto;
+        border: 1px solid #f0f0f0;
+    }
+
+    .testimonial-title {
+        text-align: center;
+        font-size: 2.5em;
+        background: linear-gradient(to right, rgb(57, 6, 166), rgb(33, 28, 33));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: gray;
+        margin-bottom: 20px;
+        font-weight: bold;
+        position: relative;
+    }
+
+    .testimonial-title::after {
+        content: "";
+        display: block;
+        height: 5px;
+        width: 100px;
+        background: gray;
+        margin: 10px auto 0;
+        border-radius: 5px;
+    }
+
+    .clients-section {
+        padding: 5px 20px;
+    }
+
+    .client-row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .client-row.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .client-row:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .client-text, .client-image {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .client-text {
+        position: sticky;
+        top: 20px;
+        
+    }
+
+    .client-image {
+        position: sticky;
+        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .client-text h2 {
+        font-size: 3em;
+        color: #ff0404;
+        margin-bottom: 15px;
+    }
+
+    .client-text p {
+        font-size: 33px;
+        color:#181b31;
+        padding-top: 20px;
+        text-align: right;
+        line-height: 40px;
+    }
+  
+
+    .client-image img {
+        width: 400px;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .client-row {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .client-row:nth-child(even) {
+            flex-direction: column;
+        }
+
+        .client-image, .client-text {
+            padding: 10px;
+        }
+
+        .client-text h2 {
+            font-size: 1.5em;
+        }
+
+        .client-text p {
+            font-size: 1em;
+        }
+    }
+
+    @media (max-width: 490px) {
+        .testimonial-container {
+            padding: 30px 10px;
+            margin: 20px auto;
+        }
+
+        .clients-section {
+            padding: 20px 10px;
+        }
+
+        .client-row {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .client-text, .client-image {
+            padding: 10px;
+        }
+
+        .client-text h2 {
+            font-size: 1.2em;
+        }
+
+        .client-text p {
+            font-size: 0.9em;
+        }
+
+        .client-image img {
+            max-width: 300px;
+        }
+    }
+    /* General badge styling */
+.badge2 {
+    background-color: #e0e0e0;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 1em;
+    color: #254043;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+
+.client-row:nth-child(odd) .client-text {
+    text-align: right;
+}
+
+.client-row:nth-child(even) .client-text {
+    text-align: left;
+}
+
+
+.client-text {
+    flex: 1;
+}
+
+.client-image {
+    flex: 1;
+}
+
+/* To ensure text alignment inside the badge */
+.client-row:nth-child(odd) .badge2 {
+    text-align: right;
+}
+
+.client-row:nth-child(even) .badge2 {
+    text-align: right;
+}
+
+
+</style>
+
+<div class="testimonial-container">
+    <div class="testimonial-title">Clients</div>
+    <div class="clients-section">
+        <div class="client-row">
+            <div class="client-text">
+                <span class="badge2">ADS • ADS • ADS</span>
+                <p>Askin Astrogy worked his astrological wonders with Adymize's enchanting services</p>
+            </div>
+            <div class="client-image">
+                <img src="Annath-Fashion-Express-(Mrs.png" alt="Client 1">
+            </div>
+        </div>
+    <div class="clients-section">
+        <div class="client-row">
+            <div class="client-image">
+                <img src="Brands-in-Hands-(Prince-Malik).png" alt="Client 2">
+            </div>
+            <div class="client-text">
+                <span class="badge2">ADS • ADS • ADS</span>
+                <p  style=" font-size: 33px;
+                color:#181b31;
+                padding-top: 20px;
+                text-align: left;
+                line-height: 40px;">Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Fusce dapibus.</p>
+            </div>
+        </div>
+    <div class="clients-section">
+        <div class="client-row">
+            <div class="client-text">
+                <span class="badge2">ADS • ADS • ADS</span>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Sed posuere consectetur est at lobortis.</p>
+            </div>
+            <div class="client-image">
+                <img src="Colourfit-Roofing-(Mr.png" alt="Client 3">
+            </div>
+        </div>
+    <div class="clients-section">
+        <div class="client-row">
+            <div class="client-image">
+                <img src="Desiiety-Fashion-By-Prisha-(Mrs.png" alt="Client 4">
+            </div>
+            <div class="client-text">
+                <span class="badge2">ADS • ADS • ADS</span>
+                <p style=" font-size: 33px;
+                color:#181b31;
+                padding-top: 20px;
+                text-align: left;
+                line-height: 40px;">Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere.</p>
+            </div>
+        </div>
+    <div class="clients-section">
+        <div class="client-row">
+            <div class="client-text">
+                <span class="badge2">ADS • ADS • ADS</span>
+                <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.</p>
+            </div>
+            <div class="client-image">
+                <img src="Fincastle-Residency-(CEO-–-Saurabh-M.png" alt="Client 5">
+            </div>
+        </div>
+    <div class="clients-section">
+        <div class="client-row">
+            <div class="client-image">
+                <img src="Manglam-Studies-(Aman-Kumar).png" alt="Client 6">
+            </div>
+            <div class="client-text">
+                <span class="badge2">ADS • ADS • ADS</span>
+                <p style=" font-size: 33px;
+                color:#181b31;
+                padding-top: 20px;
+                text-align: left;
+                line-height: 40px;">Maecenas faucibus mollis interdum. Curabitur blandit tempus porttitor.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>      </div>
+</div>
+</div>
+</div>
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+        const clientRows = document.querySelectorAll('.client-row');
+
+        const checkVisibility = () => {
+            const triggerBottom = window.innerHeight * 0.85;
+
+            clientRows.forEach((row, index) => {
+                const rowTop = row.getBoundingClientRect().top;
+
+                if (rowTop < triggerBottom) {
+                    setTimeout(() => {
+                        row.classList.add('visible');
+                    }, index * 150); // Adjust the delay as needed
+                }
+            });
+        };
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Initial check on load
+    });
+</script>
+<div class="onboarding-section">
+    <div class="onboarding-wrapper">
+        <div class="text-content">
+            <div class="header">
+                <h2>How it starts?</h2>
+                <span class="header-tag">ONBOARDING • ONBOARDING • ONBOARDING</span>
+            </div>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-details">
+                        <h3>Plan Your Growth</h3>
+                        <p>Dream big, strategize with us, and turn plans into profits.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-details">
+                        <h3>Handover the project</h3>
+                        <p>We're your project navigators, turning plans into reality. Smooth sailing guaranteed.</p>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-details">
+                        <h3>Count the profit</h3>
+                        <p>Sit back, relax, and let the profits set sail. Your success story starts with us!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="image-box">
+            <img src="daily-payment1.jpg" alt="Daily Payments">
+        </div>
+    </div>
+</div>
+
+<style>
+
+
+.onboarding-wrapper {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 100%;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 2rem;
+    color: #000;
+}
+
+.header .header-tag {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.step-list {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-top: 30px;
+}
+
+.step-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.step-number {
+    background: #333;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.step-number:hover {
+    background: #555;
+    transform: scale(1.1);
+}
+
+.step-details {
+    max-width: calc(100% - 60px);
+}
+
+.step-details h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.step-details p {
+    margin: 5px 0 0;
+    color: #000;
+}
+
+.step-list::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: #ccc;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.step-item:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    width: 20px;
+    height: 2px;
+    background: #ccc;
+}
+
+.step-item:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 10px);
+    width: 20px;
+    height: 2px;
+    background: #ccc;
+}
+
+.image-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .text-content {
+        padding: 15px;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .step-number {
+        font-size: 1.2rem;
+        width: 40px;
+        height: 40px;
+    }
+
+    .step-details h3 {
+        font-size: 1rem;
+    }
+
+    .step-details p {
+        font-size: 0.9rem;
+    }
+
+    .image-box img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 490px) {
+    .onboarding-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        width: 90%;
+        text-align: center;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .step-number {
+        font-size: 1rem;
+        width: 30px;
+        height: 30px;
+    }
+
+    .step-details h3 {
+        font-size: 0.9rem;
+    }
+
+    .step-details p {
+        font-size: 0.8rem;
+    }
+
+    .image-box img {
+        width: 100%;
+        max-height: 200px;
+    }
+}
+</style>
+
+
+<section class="testimonials-and-logos">
+    <h2>
+        <img src="avatar1.png" alt="Icon" class="heading-icon">
+        Hear from them
+    </h2>
+    <div class="testimonial-cards">
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <img src="image1.jpg" alt="Naman Deshmukh">
+                <p>Naman Deshmukh effortlessly launched his course to stardom with Adymize's magic touch</p>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="testimonial-card">
+            <div class="testimonial-content">
+                <img src="image2.jpg" alt="Rahul Raz">
+                <p>Rahul Raz worked his astrological wonders with Adymize's magic touch</p>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-section">
+        <h3>Our Partners</h3>
+        <div class="logo-container left-to-right">
+            <div class="logo-wrapper">
+                <!-- Logos 1-8 -->
+                <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                <!-- Repeat items to ensure continuous scrolling -->
+                <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo-section">
+        <div class="logo-container right-to-left">
+            <div class="logo-wrapper">
+                <!-- Logos 9-16 -->
+                <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                <!-- Repeat items to ensure continuous scrolling -->
+                <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .testimonials-and-logos {
+        max-width: 1100px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    h2 {
+        text-align: center;
+        color: #4a4a4a;
+        margin-bottom: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .heading-icon {
+        width: 30px;
+        height: 30px;
+        animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .testimonial-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        max-width: 490px;
+        width: 100%;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(255, 253, 253, 0.1);
+        border: 1px solid #ddd;
+    }
+
+    .testimonial-content {
+        padding: 20px;
+        background-color: #ffffff;
+    }
+
+    .testimonial-content img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        margin-bottom: 10px;
+    }
+
+    .testimonial-content p {
+        color: #333;
+        margin: 10px 0;
+    }
+
+    .video-container {
+        padding: 0 20px 20px;
+        background-color: #f9f9f9;
+    }
+
+    video {
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+    }
+
+    .logo-section {
+        margin-top: 20px;
+    }
+
+    .logo-container {
+        position: relative;
+        height: 70px; /* Height for larger logos */
+        overflow: hidden;
+    }
+
+    .logo-wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 200%; /* Adjusted width for smoother continuous effect */
+        animation: scroll-left-to-right 10s linear infinite;
+    }
+
+    .logo-item {
+        flex: 0 0 auto;
+        width: 15%; /* Adjusted width for larger logos */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px; /* Reduced space between logos */
+        background: #e4dfdf; /* Light background for logo box */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.992); /* Grey shadow */
+        padding: 5px; /* Padding around logos */
+        border-radius: 10px; /* Rounded corners */
+    }
+
+    .logo-item img {
+        width: 120px; /* Increased logo size */
+        height: auto;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    @keyframes scroll-left-to-right {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    .left-to-right .logo-wrapper {
+        animation: scroll-left-to-right 15s linear infinite;
+    }
+
+    .right-to-left .logo-wrapper {
+        animation: scroll-right-to-left 15s linear infinite;
+    }
+
+    @keyframes scroll-right-to-left {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .logo-container {
+            height: 100px; /* Adjusted height for smaller screens */
+        }
+
+        .logo-wrapper {
+            width: 300%; /* Increased width for more logos on smaller screens */
+        }
+
+        .logo-item {
+            width: 20%; /* Adjusted width for better fitting */
+            margin-right: 5px; /* Reduced space between logos */
+        }
+    }
+
+    @media (max-width: 490px) {
+        .logo-container {
+            height: 80px; /* Adjusted height for very small screens */
+        }
+
+        .logo-wrapper {
+            width: 400%; /* Increased width for more logos on very small screens */
+        }
+
+        .logo-item {
+            width: 25%; /* Adjusted width for better fitting */
+        }
+    }
+</style>
+       
+
+<div class="agency-container">
+    <div class="agency-floating-avatar">
+        <img src="avatar21.png" alt="Avatar" class="agency-avatar">
+    </div>
+    <div class="agency-content">
+        <h1>Need Help?</h1>
+        <div class="agency-faq">
+            <div class="agency-faq-item">
+                <button class="agency-faq-question">Why should I choose Adymize over other agencies? <span class="agency-toggle-icon">+</span></button>
+                <div class="agency-faq-answer">
+                    <p>Choosing Adymize means choosing a results-driven, client-focused, and technologically advanced digital marketing partner. With a proven track record, personalized strategies, and a commitment to transparent communication, we are confident in our ability to elevate your online presence and drive sustainable business growth.</p>
+                </div>
+            </div>
+            <div class="agency-faq-item">
+                <button class="agency-faq-question">What sets Adymize apart from the competition? <span class="agency-toggle-icon">+</span></button>
+                <div class="agency-faq-answer">
+                    <p>Adymize stands out with our innovative strategies, deep understanding of market trends, and dedication to client success.</p>
+                </div>
+            </div>
+            <div class="agency-faq-item">
+                <button class="agency-faq-question">How can Adymize guarantee accurate reporting?<span class="agency-toggle-icon">+</span></button>
+                <div class="agency-faq-answer">
+                    <p>Adymize's commitment to accuracy is upheld through advanced technology, real-time validation, transparency, a knowledgeable team, and a rigorous quality control process.
+                        By choosing Adymize, clients can trust that their reporting is reliable and reflects the most accurate and current data available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+ .agency-container {
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1100px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.agency-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.agency-header h1 {
+    font-size: 36px;
+    color: #4A4A4A;
+    margin-right: 20px;
+}
+
+.agency-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    animation: float 3s ease-in-out infinite;
+}
+
+.agency-faq-item {
+    margin-top: 20px;
+}
+
+.agency-faq-question {
+    width: 100%;
+    text-align: left;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.agency-toggle-icon {
+    font-size: 24px;
+    color: #666;
+}
+
+.agency-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 10px;
+}
+
+.agency-faq-answer p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+@media (max-width: 490px) {
+    .agency-container {
+        padding: 20px;
+    }
+
+    .agency-header h1 {
+        font-size: 28px;
+    }
+
+    .agency-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .agency-faq-question {
+        font-size: 18px;
+    }
+
+    .agency-faq-answer p {
+        font-size: 16px;
+    }
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+</style>
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.agency-faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.agency-faq-question');
+        const answer = item.querySelector('.agency-faq-answer');
+        const toggleIcon = item.querySelector('.agency-toggle-icon');
+
+        question.addEventListener('click', () => {
+            const isOpen = answer.style.maxHeight;
+
+            // Close all answers
+            faqItems.forEach(el => {
+                el.querySelector('.agency-faq-answer').style.maxHeight = null;
+                el.querySelector('.agency-toggle-icon').textContent = '+';
+            });
+
+            // Toggle the clicked one
+            if (!isOpen) {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                toggleIcon.textContent = '−';
+            } else {
+                answer.style.maxHeight = null;
+                toggleIcon.textContent = '+';
+            }
+        });
+    });
+});
+
+</script>
+
+</body>
+</html>
