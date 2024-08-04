@@ -20,6 +20,148 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
+<div id="preloader">
+    <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <style>
+        #preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    animation: bounce 1.5s infinite ease-in-out, rotate 5s linear infinite;
+}
+
+.dot:nth-child(1) {
+    background-color: #e74c3c;
+    animation-delay: 0s;
+    top: 0;
+    left: 0;
+}
+
+.dot:nth-child(2) {
+    background-color: #f1c40f;
+    animation-delay: 0.3s;
+    top: 0;
+    right: 0;
+}
+
+.dot:nth-child(3) {
+    background-color: #2ecc71;
+    animation-delay: 0.6s;
+    bottom: 0;
+    right: 0;
+}
+
+.dot:nth-child(4) {
+    background-color: #9b59b6;
+    animation-delay: 0.9s;
+    bottom: 0;
+    left: 0;
+}
+
+.dot:nth-child(5) {
+    background-color: #e67e22;
+    animation-delay: 1.2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#content {
+    display: none; /* Hide content initially */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .loader {
+        width: 60px;
+        height: 60px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 490px) {
+    #preloader {
+        background: #2c3e50; /* Adjust background color if needed */
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+    }
+
+    .dot {
+        width: 10px;
+        height: 10px;
+    }
+
+    .dot:nth-child(1), .dot:nth-child(2), .dot:nth-child(3), .dot:nth-child(4), .dot:nth-child(5) {
+        animation-duration: 5s; /* Adjust duration for smaller screens */
+    }
+}
+    </style>
+    <script>
+         window.addEventListener('load', () => {
+            document.getElementById('preloader').style.display = 'none';
+            document.getElementById('content').style.display = 'block';
+        });
+    </script>
+</div>
     <header>
         <nav>
             <div class="logo">
@@ -518,7 +660,7 @@
         </div>
     </div>
     <style>
-       /* Container Styling */
+   /* Container Styling */
 .container {
     display: flex;
     align-items: center;
@@ -544,7 +686,8 @@
 
 /* Image Box Content Styling */
 .image-box img {
-    max-width: 100%;
+    width: 100%; /* Ensure image fits container */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 15px;
     transition: transform 0.3s ease-in-out;
 }
@@ -674,17 +817,26 @@ p {
     .content {
         text-align: center; /* Center align text */
         padding-left: 0; /* Remove left padding */
+        margin-top: 20px; /* Add margin above content */
     }
 
     .image-box {
+        margin: auto;
         order: 1; /* Move image to the top */
-        margin-top: 20px;
+        max-width: 240px; 
+        height: 280px;/* Ensure image fits container */
+        margin-top: 0; /* No top margin */
+    }
+
+    .image-box img {
+        width: 350px; 
+        height: 350px;/* Ensure image fits container */ /* Maintain aspect ratio */
     }
 
     .content-header {
         order: 2; /* Move content header below the image */
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .buttons {
@@ -705,6 +857,7 @@ p {
         font-size: 1em; /* Adjusted paragraph font size for smaller screens */
     }
 }
+
 
     </style>
     </section>
@@ -1008,8 +1161,7 @@ p {
         <div class="text-content">
             <div class="header">
                 <h4>How it starts?</h4>
-                <span class="badge3">ONBOARDING • ONBOARDING • ONBOARDING
-                </span>
+                <span class="badge3">ONBOARDING • ONBOARDING • ONBOARDING</span>
             </div>
             <div class="step-list">
                 <div class="step-item">
@@ -1042,54 +1194,54 @@ p {
 </div>
 
 <style>
-     .badge3 {
-        background: linear-gradient(to right, #f7a7f7, #a685ee); /* Background gradient */
-        padding: 5px 12px;
+    .onboarding-section {
+        background: #f4f7f6;
+        padding: 40px 0;
+    }
+
+    .badge3 {
+        background: linear-gradient(to right, #f7a7f7, #a685ee);
+        padding: 8px 16px;
         border-radius: 20px;
         font-size: 1em;
-        color: #254043; 
-        margin-top: 20px;
+        color: #254043;
         display: inline-block;
+        margin-top: 10px;
     }
+
     .onboarding-wrapper {
         background: #ffffff;
-        padding: 30px;
+        padding: 20px;
         border-radius: 12px;
         box-shadow: 0 3px 6px rgba(93, 93, 93, 0.15);
         max-width: 1100px;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 15px;
         align-items: flex-start;
-        position: relative;
     }
 
     .text-content {
         flex: 1;
-        max-width: 70%;
-        padding: 20px;
+        max-width: 100%;
+        padding: 15px;
         background: #ffffff;
         border-radius: 12px;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
     }
 
     .header {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .header h4 {
-        font-size: 2rem;
+        font-size: 1.8rem;
         color: -webkit-linear-gradient(#455AB1, #A269DA);
         margin: 0;
         font-weight: bold;
-    }
-
-    .header .header-tag {
-        display: block;
-        margin-top: 5px;
-        color: #000000;
-        font-size: 0.9rem;
     }
 
     .step-list {
@@ -1098,36 +1250,36 @@ p {
 
     .step-item {
         display: flex;
-        align-items: center;
-        margin-bottom: 20px;
-        padding: 15px;
+        align-items: flex-start;
+        margin-bottom: 15px;
+        padding: 10px;
         border-radius: 12px;
-        color: #fff;
-        background: #E9E4F1; /* Light purple background */
+        background: #E9E4F1;
+        border: 1px solid #dcdcdc;
         transition: background 0.3s, transform 0.3s;
     }
 
     .step-item:hover {
-        background: #9C8EE6; /* Darker purple on hover */
+        background: #9C8EE6;
         transform: scale(1.02);
     }
 
     .step-number {
-        background: #E9E4F1; /* Light purple background for circles */
+        background: #E9E4F1;
         color: #292A43;
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         width: 50px;
         height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
-        margin-right: 20px;
-        transition: background 0.3s, transform 0.3s;
+        margin-right: 15px;
+        transition: background 0.3s, color 0.3s, transform 0.3s;
     }
 
     .step-number:hover {
-        background: #9C8EE6; /* Hover color for circles */
+        background: #9C8EE6;
         color: #fff;
         transform: scale(1.2);
     }
@@ -1138,12 +1290,13 @@ p {
 
     .step-details h3 {
         margin: 0;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: #292A43;
     }
 
     .step-details p {
         margin: 5px 0 0;
+        font-size: 0.9rem;
         color: #292A43;
     }
 
@@ -1152,30 +1305,30 @@ p {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 10px;
     }
 
     .image-box img {
         max-width: 100%;
         height: auto;
-        max-height: 500px;
-        margin-top: 50px;
+        max-height: 300px;
         border-radius: 12px;
+        object-fit: cover;
     }
 
-    /* Responsive Design */
     @media (max-width: 768px) {
         .text-content {
             padding: 15px;
         }
 
         .header h4 {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
         }
 
         .step-number {
             font-size: 1.4rem;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
         }
 
         .step-details h3 {
@@ -1188,6 +1341,7 @@ p {
 
         .image-box img {
             width: 80%;
+            max-height: 350px;
         }
     }
 
@@ -1195,30 +1349,38 @@ p {
         .onboarding-wrapper {
             flex-direction: column;
             align-items: center;
-            padding: 20px;
+            padding: 10px;
         }
 
         .text-content {
-            width: 100%; /* Full width on smaller screens */
-            text-align: left;
-            order: 2;
+            width: 100%;
+            text-align: center;
             padding: 10px;
+            margin-bottom: 10px;
         }
 
         .image-box {
             width: 100%;
-            order: 1;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
 
         .header h4 {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+        }
+
+        .step-item {
+            padding: 8px;
+            margin-bottom: 10px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
 
         .step-number {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             width: 35px;
             height: 35px;
+            margin-bottom: 10px;
         }
 
         .step-details h3 {
@@ -1226,16 +1388,16 @@ p {
         }
 
         .step-details p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .image-box img {
             width: 100%;
-            max-height: 250px;
-            object-fit: cover;
+            max-height: 200px;
         }
     }
 </style>
+
 <section class="testimonials-and-logos">
     <h9>
         <img src="avatar1.png" alt="Icon" class="heading-icon">
