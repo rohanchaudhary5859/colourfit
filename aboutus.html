@@ -90,8 +90,7 @@
 {
     background: url(BG.png);
 }
-
-/* Navigation bar styles */
+/* Existing styles */
 nav {
     display: flex;
     align-items: center;
@@ -100,45 +99,62 @@ nav {
     padding: 20px 0; /* Smaller vertical padding */
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1090px;
-    margin: 15px auto; /* Center the nav horizontally and add top margin */
+    max-width: 1100px;
+    margin: 10px auto; /* Center the nav horizontally and add top margin */
     border: 1px solid #f0f0f0;
     position: fixed; /* Fixed position at the top */
     top: 0;
-    left: 50%; /* Center the nav horizontally */
-    transform: translateX(-50%);
+    left: 0;
+    right: 0; /* Center the nav horizontally */
     z-index: 1000; /* Ensure it stays above other content */
     text-align: center; /* Center the text */
-    width: 100%; /* Ensure the nav takes full width */
 }
 
 .logo img {
     height: 30px; /* Adjusted logo size */
     margin: 0 20px; /* Add horizontal margin for spacing */
+    transition: filter 0.3s; /* Smooth transition for logo hover effect */
+}
+
+.logo img:hover {
+    filter: brightness(0.9); /* Slightly darken logo on hover */
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
     margin: 0 auto; /* Center the nav links horizontally */
 }
 
 .nav-links li a {
     text-decoration: none;
     color: #333;
-    font-size: 0.9rem;
+    font-size: .9rem;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.nav-links li a:hover {
+    color: #0066cc; /* Light blue color on hover */
 }
 
 .chat-now {
-    background-color: #6c63ff;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 0.75rem;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin: 0 20px; /* Add horizontal margin for spacing */
+    background-color: #6c63ff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    padding: 0.5rem 0.75rem; /* Padding inside the button */
+    border-radius: 7px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    margin: 0 20px; /* Horizontal margin for spacing */
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Fit to content */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.chat-now:hover {
+    background-color: #5a54e5; /* Slightly darker shade for hover effect */
 }
 
 .burger {
@@ -157,10 +173,6 @@ nav {
 
 /* Media query for smaller screens */
 @media (max-width: 768px) {
-    nav {
-        padding-left: 20px;
-    }
-    
     .nav-links {
         display: none; /* Hide nav-links initially */
         flex-direction: column;
@@ -188,10 +200,6 @@ nav {
 }
 
 @media (max-width: 490px) {
-    nav {
-        padding-left: 20px;
-    }
-
     .nav-links {
         display: none; /* Hide nav-links initially */
         flex-direction: column;
@@ -219,6 +227,7 @@ nav {
         margin-top: 10px; /* Add top margin to the buttons */
     }
 }
+
 
 .container {
     max-width: 1110px;
@@ -617,16 +626,16 @@ nav {
             <p>&copy; 2024 Colour Fits A Digital Agency</p>
         </div>
         <div class="footer-socials">
-    <a href="https://www.linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-    </a>
-    <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.facebook.com/yourcompany" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook"></i>
-    </a>
-</div>
+            <a href="https://www.linkedin.com/company/colour-fits-a-digital-agency?originalSubdomain=in" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://m.facebook.com/Colourfits.A.Digital.Agency/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://m.facebook.com/Colourfits.A.Digital.Agency/" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
+            </a>
+        </div>
 
     </div>
 </footer>

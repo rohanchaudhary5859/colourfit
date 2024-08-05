@@ -25,13 +25,16 @@
             <a href="index.html"><img src="Logo-final.png" alt="Colour Fits Logo"></a>
         </div>
         <ul class="nav-links">
+            <li><a href="aboutus.html">About Us</a></li>
             <li><a href="#features">Services</a></li>
             <li><a href="#clients">Clients</a></li>
-            <li><a href="#">Why Colourfit?</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
+            
+            
+            <li><a href="#testimonials-and-logos">Reviews</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
         </ul>
-        <button class="chat-now">Chat Now</button>
+        <a href="https://wa.me/7652968043" class="chat-now" target="_blank">Chat Now</a>
+
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -256,7 +259,9 @@
         <section class="hero">
             <h1>Difficult to Grow <br>Your <span class="highlight">Business?</span></h1>
             <p>5+ years | Scale Your E-Commerce Brand From 10-20 LAKHS to 1 CRORE<br>A dedicated team of specialists, delivering remarkable work to our clients worldwide!</p>
-            <button class="ctar">Book a Strategy Call</button>
+            <a href="contact.html">
+                <button class="ctar">Book a Strategy Call</button>
+              </a>
             <p>Our Performance Marketing Services are Certified by</p>
     
             <div class="certifications">
@@ -1227,8 +1232,7 @@ p {
         }
     }
 </style>
-
-<section class="testimonials-and-logos">
+<section class="testimonials-and-logos" id="testimonials-and-logos">
     <div class="about-item hidden">
         <h9>
             <img src="avatar1.png" alt="Icon" class="heading-icon">
@@ -1294,11 +1298,12 @@ p {
                     <div class="logo-item"><img src="6.png" alt="Company 6"></div>
                     <div class="logo-item"><img src="7.png" alt="Company 7"></div>
                     <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    
                 </div>
             </div>
         </div>
 
-        <div class="logo-section right-to-left">
+        <div class="logo-section left-to-right">
             <div class="logo-container">
                 <div class="logo-wrapper">
                     <!-- Logos 9-16 -->
@@ -1319,6 +1324,7 @@ p {
                     <div class="logo-item"><img src="14.png" alt="Company 14"></div>
                     <div class="logo-item"><img src="15.png" alt="Company 15"></div>
                     <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <!-- Logos 9-16 -->
                     <div class="logo-item"><img src="9.png" alt="Company 9"></div>
                     <div class="logo-item"><img src="10.png" alt="Company 10"></div>
                     <div class="logo-item"><img src="11.png" alt="Company 11"></div>
@@ -1336,6 +1342,7 @@ p {
                     <div class="logo-item"><img src="14.png" alt="Company 14"></div>
                     <div class="logo-item"><img src="15.png" alt="Company 15"></div>
                     <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    
                 </div>
             </div>
         </div>
@@ -1486,6 +1493,16 @@ video,
     transform: scale(1.1);
 }
 
+
+.left-to-right .logo-wrapper {
+    animation: scroll-left-to-right 20s linear infinite;
+}
+
+.right-to-left .logo-wrapper {
+    animation: scroll-right-to-left 20s linear infinite;
+}
+
+/* Keyframe animations */
 @keyframes scroll-left-to-right {
     from {
         transform: translateX(0);
@@ -1502,16 +1519,7 @@ video,
     to {
         transform: translateX(50%);
     }
-}
-
-.left-to-right .logo-wrapper {
-    animation: scroll-left-to-right 30s linear infinite;
-}
-
-.right-to-left .logo-wrapper {
-    animation: scroll-left-to-right 30s linear infinite;
-}
-
+} 
 /* Media Query for screens 490px and below */
 @media screen and (max-width: 490px) {
     .testimonial-card {
@@ -1544,9 +1552,6 @@ video,
 }
 
 </style>
-
-
-
        
 <div class="agency-container">
    
@@ -1557,21 +1562,21 @@ video,
         <h1>Need Help?</h1>
         <div class="agency-faq">
             <div class="agency-faq-item">
-                <button class="agency-faq-question">Why should I choose Colourfit over other agencies? <span class="agency-toggle-icon">+</span></button>
+                <button class="agency-faq-question">Why should I choose Colour fits over other agencies? <span class="agency-toggle-icon">+</span></button>
                 <div class="agency-faq-answer">
-                    <p>Choosing Colourfit means choosing a results-driven, client-focused, and technologically advanced digital marketing partner. With a proven track record, personalized strategies, and a commitment to transparent communication, we are confident in our ability to elevate your online presence and drive sustainable business growth.</p>
+                    <p>Choosing Colour fits means choosing a results-driven, client-focused, and technologically advanced digital marketing partner. With a proven track record, personalized strategies, and a commitment to transparent communication, we are confident in our ability to elevate your online presence and drive sustainable business growth.</p>
                 </div>
             </div>
             <div class="agency-faq-item">
-                <button class="agency-faq-question">What sets Colourfit apart from the competition? <span class="agency-toggle-icon">+</span></button>
+                <button class="agency-faq-question">What sets Colour fits apart from the competition? <span class="agency-toggle-icon">+</span></button>
                 <div class="agency-faq-answer">
-                    <p>Colourfit stands out with our innovative strategies, deep understanding of market trends, and dedication to client success.</p>
+                    <p>Colour fits stands out with our innovative strategies, deep understanding of market trends, and dedication to client success.</p>
                 </div>
             </div>
             <div class="agency-faq-item">
-                <button class="agency-faq-question">How can Colourfit guarantee accurate reporting?<span class="agency-toggle-icon">+</span></button>
+                <button class="agency-faq-question">How can Colour fits guarantee accurate reporting?<span class="agency-toggle-icon">+</span></button>
                 <div class="agency-faq-answer">
-                    <p>Colourfit's commitment to accuracy is upheld through advanced technology, real-time validation, transparency, a knowledgeable team, and a rigorous quality control process. By choosing Colourfit, clients can trust that their reporting is reliable and reflects the most accurate and current data available.</p>
+                    <p>Colour fit's commitment to accuracy is upheld through advanced technology, real-time validation, transparency, a knowledgeable team, and a rigorous quality control process. By choosing Colourfit, clients can trust that their reporting is reliable and reflects the most accurate and current data available.</p>
                 </div>
             </div>
         </div>
@@ -1738,13 +1743,13 @@ document.addEventListener('DOMContentLoaded', function() {
             <p>&copy; 2024 Colour Fits A Digital Agency</p>
         </div>
         <div class="footer-socials">
-            <a href="https://www.linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/colour-fits-a-digital-agency?originalSubdomain=in" target="_blank" aria-label="LinkedIn">
                 <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram">
+            <a href="https://m.facebook.com/Colourfits.A.Digital.Agency/" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://www.facebook.com/yourcompany" target="_blank" aria-label="Facebook">
+            <a href="https://m.facebook.com/Colourfits.A.Digital.Agency/" target="_blank" aria-label="Facebook">
                 <i class="fab fa-facebook"></i>
             </a>
         </div>

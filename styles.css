@@ -10,6 +10,7 @@
 header {
     padding: 1rem 2rem;
 }
+/* Existing styles */
 nav {
     display: flex;
     align-items: center;
@@ -30,8 +31,13 @@ nav {
 }
 
 .logo img {
-    height: 30px; /* Adjusted logo size */
+    height: 40px; /* Adjusted logo size */
     margin: 0 20px; /* Add horizontal margin for spacing */
+    transition: filter 0.3s; /* Smooth transition for logo hover effect */
+}
+
+.logo img:hover {
+    filter: brightness(0.9); /* Slightly darken logo on hover */
 }
 
 .nav-links {
@@ -44,18 +50,31 @@ nav {
 .nav-links li a {
     text-decoration: none;
     color: #333;
-    font-size: .9rem;
+    font-size: 1.0rem;
+    transition: color 0.3s; /* Smooth transition for text color */
+}
+
+.nav-links li a:hover {
+    color: #0066cc; /* Light blue color on hover */
 }
 
 .chat-now {
-    background-color: #6c63ff;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 0.75rem;
-    border-radius: 7px;
-    cursor: pointer;
-    font-size: 1rem;
-    margin: 0 20px; /* Add horizontal margin for spacing */
+    background-color: #6c63ff; /* Button background color */
+    color: #fff; /* Text color */
+    border: none; /* No border */
+    padding: 0.5rem 0.75rem; /* Padding inside the button */
+    border-radius: 7px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1rem; /* Font size */
+    margin: 0 20px; /* Horizontal margin for spacing */
+    text-decoration: none; /* Remove underline from link */
+    display: inline-block; /* Fit to content */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.chat-now:hover {
+    background-color: #5a54e5; /* Slightly darker shade for hover effect */
 }
 
 .burger {
