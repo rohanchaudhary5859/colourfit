@@ -42,52 +42,43 @@
         </div>
     </nav>
 </header>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    // Client section scroll interaction
-    const clients = document.querySelectorAll('.client');
-    let currentIndex = 0;
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
 
-    function showClient(index) {
-        clients.forEach((client, i) => {
-            const textContainer = client.querySelector('.text-container');
-            if (i === index) {
-                client.classList.add('active');
-                textContainer.classList.add('active');
-            } else {
-                client.classList.remove('active');
-                textContainer.classList.remove('active');
+        // Function to toggle navigation menu
+        const toggleNav = () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        };
+
+        // Burger menu toggle interaction
+        burger.addEventListener('click', toggleNav);
+
+        // Close nav when clicking a link
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    toggleNav();
+                }
+            });
+        });
+
+        // Close nav when clicking outside the nav on small screens
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !burger.contains(e.target) && navLinks.classList.contains('active')) {
+                toggleNav();
             }
         });
-    }
-
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const scrollIndex = Math.floor(scrollTop / windowHeight);
-
-        if (scrollIndex !== currentIndex && scrollIndex < clients.length) {
-            currentIndex = scrollIndex;
-            showClient(currentIndex);
-        }
     });
-
-    showClient(currentIndex); // Show the first client text initially
-
-    // Burger menu toggle interaction
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('toggle');
-    });
-});
-
-    </script>
+</script>
 <main>
-        <style>
-           .hero {
+    <style>
+        
+
+        .hero {
             position: relative;
             width: 100%;
             height: 100vh;
@@ -106,10 +97,11 @@
         }
 
         .hero.zoom-out {
-            transform: scale(0.9); /* Zoom-out effect */
-            z-index: -1;
-        }
-
+    transform: scale(0.9); /* Zoom-out effect */
+    z-index: 1; /* Ensure it is above other elements */
+    position: relative; /* Ensure it respects the z-index */
+    transition: transform 0.5s ease-in-out; /* Smooth transition */
+}
         .hero h1 {
             font-size: 70px;
             line-height: 1.2;
@@ -132,7 +124,7 @@
             color: rgba(0, 0, 0, 0.7);
         }
 
-        .ctar {
+        .cta-button {
             background: #28263C;
             color: #fff;
             border: none;
@@ -141,26 +133,33 @@
             cursor: pointer;
             font-size: 1rem;
             margin-top: 3rem;
+            transition: background 0.3s ease;
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Ensure it behaves like a button */
         }
 
-        .certifications, .featured-in {
+        .cta-button:hover {
+            background: #6c63ff; /* Hover effect */
+        }
+
+       .certifications, .featured-in {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
         }
 
-        .certifications img{
-            max-width: 20%;
+        .certifications img {
+            max-width: 18%;
             height: auto;
             margin: 0 10px;
         }
+
         .featured-in img {
-            max-width: 20%;
+            max-width: 16%;
             height: auto;
             margin: 0 15px;
         }
-
 
         .certifications img {
             width: 100%;
@@ -185,15 +184,11 @@
             justify-content: center; /* Center-align logos */
             gap: 20px; /* Adjust gap between logos */
         }
-
         /* Media Query for Small Screens */
         @media (max-width: 768px) {
             .hero {
-                height: auto; /* Allow height to adjust based on content */
+                height: auto; 
                 padding: 20px;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
             }
 
             .hero h1 {
@@ -205,7 +200,7 @@
                 font-size: 1rem;
             }
 
-            .ctar {
+            .cta-button {
                 padding: 0.5rem 1rem;
                 font-size: 0.875rem;
             }
@@ -219,7 +214,7 @@
         @media (max-width: 490px) {
             .hero {
                 height: auto;
-              margin-top: 70px;
+                margin-top: 70px;
                 padding: 0 20px;
             }
 
@@ -231,19 +226,19 @@
                 font-size: 0.875rem;
             }
 
-            .ctar {
+            .cta-button {
                 padding: 0.5rem 0.75rem;
                 font-size: 0.75rem;
             }
 
-            .certifications img{
+            .certifications img {
                 max-width: 90%;
                 margin: 7px;
             }
+
             .featured-in img {
                 max-width: 40%;
             }
-
 
             .featured-in h6 {
                 font-size: 1.05rem;
@@ -254,31 +249,27 @@
             }
         }
     </style>
-    </head>
+</head>
+<body>
+    <section class="hero">
+        <h1>Difficult to Grow <br>Your <span class="highlight">Business?</span></h1>
+        <p>5+ years | Scale Your E-Commerce Brand From 10-20 LAKHS to 1 CRORE<br>A dedicated team of specialists, delivering remarkable work to our clients worldwide!</p>
+        <a href="contactus.html" class="cta-button">Book a Strategy Call</a>
+        <p>Our Performance Marketing Services are Certified by</p>
+        <div class="certifications">
+            <img src="stripgoogle.png" alt="Google">
+            <!-- Add more certification logos as needed -->
+        </div>
+    </section>
 
-        <section class="hero">
-            <h1>Difficult to Grow <br>Your <span class="highlight">Business?</span></h1>
-            <p>5+ years | Scale Your E-Commerce Brand From 10-20 LAKHS to 1 CRORE<br>A dedicated team of specialists, delivering remarkable work to our clients worldwide!</p>
-            <a href="contact.html">
-                <button class="ctar">Book a Strategy Call</button>
-              </a>
-            <p>Our Performance Marketing Services are Certified by</p>
-    
-            <div class="certifications">
-                <img src="stripgoogle.png" alt="Google">
-                <!-- Add more certification logos as needed -->
-            </div>
-        </section>
-    
-        <section class="featured-in">
-            <h6>Featured In</h6>
-            <div>
-                <img src="Daily Hunt Logo.png" alt="Daily Hunt">
-                <img src="zee-business-logo.png" alt="Zee Business">
-                <!-- Add more logos as needed -->
-            </div>
-        </section>
-    
+    <section class="featured-in">
+        <h6>Featured In</h6>
+        <div>
+            <img src="Daily Hunt Logo.png" alt="Daily Hunt">
+            <img src="zee-business-logo.png" alt="Zee Business">
+            <!-- Add more logos as needed -->
+        </div>
+    </section>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const heroSection = document.querySelector('.hero');
@@ -1273,14 +1264,14 @@ p {
                     <div class="logo-item"><img src="7.png" alt="Company 7"></div>
                     <div class="logo-item"><img src="8.png" alt="Company 8"></div>
                     <!-- Repeat items to ensure continuous scrolling -->
-                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
-                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
-                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
-                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
-                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
-                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
-                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
-                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
                     <div class="logo-item"><img src="1.png" alt="Company 1"></div>
                     <div class="logo-item"><img src="2.png" alt="Company 2"></div>
                     <div class="logo-item"><img src="3.png" alt="Company 3"></div>
@@ -1290,6 +1281,14 @@ p {
                     <div class="logo-item"><img src="7.png" alt="Company 7"></div>
                     <div class="logo-item"><img src="8.png" alt="Company 8"></div>
                     <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
                     <div class="logo-item"><img src="1.png" alt="Company 1"></div>
                     <div class="logo-item"><img src="2.png" alt="Company 2"></div>
                     <div class="logo-item"><img src="3.png" alt="Company 3"></div>
@@ -1298,6 +1297,49 @@ p {
                     <div class="logo-item"><img src="6.png" alt="Company 6"></div>
                     <div class="logo-item"><img src="7.png" alt="Company 7"></div>
                     <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
                     
                 </div>
             </div>
@@ -1316,15 +1358,14 @@ p {
                     <div class="logo-item"><img src="15.png" alt="Company 15"></div>
                     <div class="logo-item"><img src="16.png" alt="Company 16"></div>
                     <!-- Repeat items to ensure continuous scrolling -->
-                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
-                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
-                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
-                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
-                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
-                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
-                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
-                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
-                    <!-- Logos 9-16 -->
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
                     <div class="logo-item"><img src="9.png" alt="Company 9"></div>
                     <div class="logo-item"><img src="10.png" alt="Company 10"></div>
                     <div class="logo-item"><img src="11.png" alt="Company 11"></div>
@@ -1334,6 +1375,47 @@ p {
                     <div class="logo-item"><img src="15.png" alt="Company 15"></div>
                     <div class="logo-item"><img src="16.png" alt="Company 16"></div>
                     <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
                     <div class="logo-item"><img src="9.png" alt="Company 9"></div>
                     <div class="logo-item"><img src="10.png" alt="Company 10"></div>
                     <div class="logo-item"><img src="11.png" alt="Company 11"></div>
@@ -1465,7 +1547,7 @@ video,
 .logo-wrapper {
     display: flex;
     flex-wrap: nowrap;
-    width: 200%;
+    animation: scroll-left-to-right 15s linear infinite;
 }
 
 .logo-item {
@@ -1486,40 +1568,22 @@ video,
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 1.0s ease-in-out;
 }
 
 .logo-item img:hover {
     transform: scale(1.1);
 }
 
-
-.left-to-right .logo-wrapper {
-    animation: scroll-left-to-right 20s linear infinite;
-}
-
-.right-to-left .logo-wrapper {
-    animation: scroll-right-to-left 20s linear infinite;
-}
-
-/* Keyframe animations */
 @keyframes scroll-left-to-right {
-    from {
+    0% {
         transform: translateX(0);
     }
-    to {
+    100% {
         transform: translateX(-50%);
     }
 }
 
-@keyframes scroll-right-to-left {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(50%);
-    }
-} 
 /* Media Query for screens 490px and below */
 @media screen and (max-width: 490px) {
     .testimonial-card {

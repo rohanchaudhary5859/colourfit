@@ -35,49 +35,38 @@
     </nav>
 </header>
     
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-    // Client section scroll interaction
-    const clients = document.querySelectorAll('.client');
-    let currentIndex = 0;
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+        const navItems = document.querySelectorAll('.nav-links li a');
 
-    function showClient(index) {
-        clients.forEach((client, i) => {
-            const textContainer = client.querySelector('.text-container');
-            if (i === index) {
-                client.classList.add('active');
-                textContainer.classList.add('active');
-            } else {
-                client.classList.remove('active');
-                textContainer.classList.remove('active');
+        // Function to toggle navigation menu
+        const toggleNav = () => {
+            navLinks.classList.toggle('active');
+            burger.classList.toggle('toggle');
+        };
+
+        // Burger menu toggle interaction
+        burger.addEventListener('click', toggleNav);
+
+        // Close nav when clicking a link
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    toggleNav();
+                }
+            });
+        });
+
+        // Close nav when clicking outside the nav on small screens
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !burger.contains(e.target) && navLinks.classList.contains('active')) {
+                toggleNav();
             }
         });
-    }
-
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        const windowHeight = window.innerHeight;
-        const scrollIndex = Math.floor(scrollTop / windowHeight);
-
-        if (scrollIndex !== currentIndex && scrollIndex < clients.length) {
-            currentIndex = scrollIndex;
-            showClient(currentIndex);
-        }
     });
-
-    showClient(currentIndex); // Show the first client text initially
-
-    // Burger menu toggle interaction
-    const burger = document.querySelector('.burger');
-    const navLinks = document.querySelector('.nav-links');
-
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('toggle');
-    });
-});
-
-    </script>
+</script>
     <style>
    /* Global styles */
 * {
