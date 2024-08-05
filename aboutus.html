@@ -26,7 +26,7 @@
             <li><a href="aboutus.html">About Us</a></li>
             <li><a href="contactus.html">Contact Us</a></li>
         </ul>
-        <button class="chat-now">Chat Now</button>
+        <a href="https://wa.me/7652968043" class="chat-now" target="_blank">Chat Now</a>
         <div class="burger">
             <div class="line1"></div>
             <div class="line2"></div>
@@ -96,22 +96,23 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    padding: 20px 0; /* Smaller vertical padding */
+    padding: 15px 0; /* Smaller vertical padding */
     border-radius: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 1100px;
+    max-width: 1090px;
     margin: 10px auto; /* Center the nav horizontally and add top margin */
     border: 1px solid #f0f0f0;
     position: fixed; /* Fixed position at the top */
     top: 0;
-    left: 0;
-    right: 0; /* Center the nav horizontally */
+    left: 50%; /* Center the nav horizontally */
+    transform: translateX(-50%);
     z-index: 1000; /* Ensure it stays above other content */
     text-align: center; /* Center the text */
+    width: 100%; /* Ensure the nav takes full width */
 }
 
 .logo img {
-    height: 30px; /* Adjusted logo size */
+    height: 40px; /* Adjusted logo size */
     margin: 0 20px; /* Add horizontal margin for spacing */
     transition: filter 0.3s; /* Smooth transition for logo hover effect */
 }
@@ -130,7 +131,7 @@ nav {
 .nav-links li a {
     text-decoration: none;
     color: #333;
-    font-size: .9rem;
+    font-size: 1.0rem;
     transition: color 0.3s; /* Smooth transition for text color */
 }
 
@@ -204,8 +205,8 @@ nav {
         display: none; /* Hide nav-links initially */
         flex-direction: column;
         width: 100%;
+        height: 200px;
         border-radius: 20px;
-        height: 260px;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -215,18 +216,28 @@ nav {
         padding-top: 20px; /* Add padding to the top of the nav links when active */
     }
 
+    .nav-links li {
+        margin-top: 10px; /* Add margin to each item */
+    }
+
     .burger {
         display: block;
     }
 
     .chat-now {
-        display: none;
-    }
-
-    .nav-links li a {
-        margin-top: 10px; /* Add top margin to the buttons */
+        display: block; /* Make "Chat Now" visible */
+        margin: 10px 0; /* Add margin to separate it from other links */
+        width: auto; /* Adjust the width to fit content */
+        padding: 0.5rem 1.25rem; /* Adjust padding for mobile view */
+        text-align: center; /* Center the text */
+        background-color: #6c63ff; /* Button background color */
+        color: white; /* Button text color */
+        border: none; /* Remove border */
+        border-radius: 7px; /* Rounded corners */
     }
 }
+
+
 
 
 .container {
