@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Section</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="stylesheet" href="https://fonts.google.com/share?selection.family=Golos+Text:wght@400..900">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColourFit - Best Marketing Agency</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Logo-final.png" alt="Colour Fits Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Why Colourfit?</a></li>
+                <li><a href="#">AboutUs</a></li>
+                <li><a href="contactus.html">Contactus</a></li>
+            </ul>
+            <button class="chat-now">Chat Now</button>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    // Client section scroll interaction
+    const clients = document.querySelectorAll('.client');
+    let currentIndex = 0;
+
+    function showClient(index) {
+        clients.forEach((client, i) => {
+            const textContainer = client.querySelector('.text-container');
+            if (i === index) {
+                client.classList.add('active');
+                textContainer.classList.add('active');
+            } else {
+                client.classList.remove('active');
+                textContainer.classList.remove('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const scrollIndex = Math.floor(scrollTop / windowHeight);
+
+        if (scrollIndex !== currentIndex && scrollIndex < clients.length) {
+            currentIndex = scrollIndex;
+            showClient(currentIndex);
+        }
+    });
+
+    showClient(currentIndex); // Show the first client text initially
+
+    // Burger menu toggle interaction
+    const burger = document.querySelector('.burger');
+    const navLinks = document.querySelector('.nav-links');
+
+    burger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        burger.classList.toggle('toggle');
+    });
+});
+
+    </script>
+    <style>
+    
+    .container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background: linear-gradient(to right, #bfb3cc, #7697cf);
+    color: #fff;
+    margin-top: -35px;
+    padding: 100px 20px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-top: 30px;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.about-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    padding: 10px;
+    width: 1070px;
+    background-color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+}
+
+.about-item:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1150px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1));
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.about-item:hover:before {
+    opacity: 1;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.about-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.about-img {
+    width: 50%;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.about-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    width: 50%;
+    padding: 0 20px;
+}
+
+.team {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.team img {
+    max-width: 1070px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.team img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+    transition: opacity 0.3s;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    transition: opacity 0.3s;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3em;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.lightbox .close:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #ecf9ff; /* White background color */
+    color: #292A43; /* Text color */
+    padding: 40px 20px; /* Increased height and padding */
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 180px; /* Larger logo size */
+    margin-bottom: 20px; /* Spacing below logo */
+}
+
+.footer-text p {
+    margin: 10px 0; /* Spacing above and below text */
+    font-size: 18px; /* Larger font size for copyright text */
+    font-weight: 400; /* Normal font weight */
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Spacing between icons */
+    margin-top: 20px; /* Spacing above social icons */
+}
+
+.footer-socials a {
+    color: #292A43; /* Icon color */
+    font-size: 30px; /* Size of social media icons */
+    transition: color 0.3s, transform 0.3s; /* Transition effects */
+}
+
+.footer-socials a:hover {
+    color: #B8B0E2; /* Color change on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-item, .about-item.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-img, .about-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-item.reverse .about-img {
+        order: 2;
+    }
+}
+
+@media (max-width: 490px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .header p {
+        font-size: 1.1em;
+    }
+
+    .about-item {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .about-img, .about-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-img {
+        max-width: 100%;
+    }
+
+    .team img {
+        max-width: 100%;
+    }
+
+    .footer {
+        padding: 30px 10px;
+    }
+
+    .footer-logo img {
+        max-width: 120px;
+    }
+
+    .footer-text p {
+        font-size: 14px;
+    }
+
+    .footer-socials {
+        gap: 15px;
+    }
+
+    .footer-socials a {
+        font-size: 24px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <section class="header">
+        <h1>About Colour - A Digital Agency</h1>
+        <p>Discover the milestones and achievements of Colour Fits A Digital Agency and its founder, Kawaljeet Singh.</p>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-item">
+                <a href="#img1">
+                    <img src="News-1.png" alt="News Article 1" class="about-img">
+                </a>
+                <div class="about-text">
+                    <h2>Business Times - April 2021</h2>
+                    <p>Meet Kawaljeet Singh, a self-made digital entrepreneur who founded Colour Fits A Digital Agency & Glow Way Production Pvt. Ltd. He hosts the TV reality show Generation Of Ideals. He leads Colour Fits A Digital Agency, an award-winning digital marketing firm recognized for its innovative strategies.</p>
+                </div>
+            </div>
+            <div class="about-item reverse">
+                <div class="about-text">
+                    <h2>Entrepreneur Weekly - June 2021</h2>
+                    <p>Kawaljeet Singh is a distinguished young entrepreneur renowned for his innovative contributions to the business world. He is the driving force behind Colour Fits A Digital Agency, an award-winning digital marketing firm.</p>
+                </div>
+                <a href="#img2">
+                    <img src="News-2.png" alt="News Article 2" class="about-img">
+                </a>
+            </div>
+            <div class="about-item">
+                <a href="#img3">
+                    <img src="Google-Certificate.png" alt="Certificate of Achievement" class="about-img">
+                </a>
+                <div class="about-text">
+                    <h2>Google Partner - Certificate of Achievement</h2>
+                    <p>This certificate is proudly presented to Kawaljeet Singh for his successful partnership with Google.</p>
+                </div>
+            </div>
+            <div class="team">
+                <a href="#img4">
+                    <img src="Team-Board.png" alt="Team Members">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Elements -->
+    <div id="img1" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="News-1.png" alt="News Article 1">
+    </div>
+    <div id="img2" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="News-2.png" alt="News Article 2">
+    </div>
+    <div id="img3" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Google-Certificate.png" alt="Certificate of Achievement">
+    </div>
+    <div id="img4" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img src="Team-Board.png" alt="Team Members">
+    </div>
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="Logo-final.png" alt="Company Logo">
+        </div>
+        <div class="footer-text">
+            <p>&copy; 2024 Colour Fits A Digital Agency</p>
+        </div>
+        <div class="footer-socials">
+            <a href="https://www.linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/yourcompany" target="_blank" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
