@@ -14,7 +14,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColourFit - Best Marketing Agency</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 
     <header>
@@ -82,10 +81,146 @@
 
     </script>
     <style>
+   /* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Golos Text', sans-serif;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 20px 0; /* Smaller vertical padding */
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1090px;
+    margin: 15px auto; /* Center the nav horizontally and add top margin */
+    border: 1px solid #f0f0f0;
+    position: fixed; /* Fixed position at the top */
+    top: 0;
+    left: 50%; /* Center the nav horizontally */
+    transform: translateX(-50%);
+    z-index: 1000; /* Ensure it stays above other content */
+    text-align: center; /* Center the text */
+    width: 100%; /* Ensure the nav takes full width */
+}
+
+.logo img {
+    height: 30px; /* Adjusted logo size */
+    margin: 0 20px; /* Add horizontal margin for spacing */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0 auto; /* Center the nav links horizontally */
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.chat-now {
+    background-color: #6c63ff;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 0 20px; /* Add horizontal margin for spacing */
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    margin: 0 20px; /* Add horizontal margin for spacing */
+}
+
+.burger div {
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    margin: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        padding-left: 20px;
+    }
     
+    .nav-links {
+        display: none; /* Hide nav-links initially */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 100%; /* Position below the navbar */
+        left: 0;
+        background-color: #ffffff;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .chat-now {
+        display: none;
+    }
+}
+
+@media (max-width: 490px) {
+    nav {
+        padding-left: 20px;
+    }
+
+    .nav-links {
+        display: none; /* Hide nav-links initially */
+        flex-direction: column;
+        width: 100%;
+        border-radius: 20px;
+        height: 260px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        padding-top: 20px; /* Add padding to the top of the nav links when active */
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .chat-now {
+        display: none;
+    }
+
+    .nav-links li a {
+        margin-top: 10px; /* Add top margin to the buttons */
+    }
+}
+
+
     .container {
-    width: 85%;
-    max-width: 1100px;
+    max-width: 1110px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -94,20 +229,28 @@
     background: linear-gradient(to right, #bfb3cc, #7697cf);
     color: #fff;
     margin-top: -35px;
-    padding: 100px 20px;
+    padding: 85px 20px;
     border-radius: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
 }
 
 .header h1 {
     font-size: 3em;
-    margin-top: 30px;
+    margin-top: 70px;
 }
-
+.about-text h2 {
+    font-size: 2.5em;
+    margin-top: 10px;
+}
 .header p {
     font-size: 1.2em;
-    margin-top: 0;
+    margin-top: 40px;
+}
+.about-text p {
+    font-size: 1.0em;
+    margin-top: 50px;
+    color: black;
 }
 
 .about-item {
@@ -152,7 +295,7 @@
 }
 
 .about-img {
-    width: 50%;
+    width: 80%;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
@@ -164,7 +307,8 @@
 }
 
 .about-text {
-    width: 50%;
+    width: 60%;
+margin: 20px;
     padding: 0 20px;
 }
 
@@ -363,14 +507,14 @@
                     <img src="News-1.png" alt="News Article 1" class="about-img">
                 </a>
                 <div class="about-text">
-                    <h2>Business Times - April 2021</h2>
-                    <p>Meet Kawaljeet Singh, a self-made digital entrepreneur who founded Colour Fits A Digital Agency & Glow Way Production Pvt. Ltd. He hosts the TV reality show Generation Of Ideals. He leads Colour Fits A Digital Agency, an award-winning digital marketing firm recognized for its innovative strategies.</p>
+                    <h2>Business Times</h2>
+                    <p>Introducing Kawaljeet Singh, a visionary digital entrepreneur behind Colour Fits A Digital Agency and Glow Way Production Pvt. Ltd. As the host of Generation Of Ideals, he mentors emerging talents. His award-winning agency is celebrated for its innovative digital marketing strategies. Tune in to Zee Business to explore his journey and impactful contributions to the digital world.</p>
                 </div>
             </div>
             <div class="about-item reverse">
                 <div class="about-text">
-                    <h2>Entrepreneur Weekly - June 2021</h2>
-                    <p>Kawaljeet Singh is a distinguished young entrepreneur renowned for his innovative contributions to the business world. He is the driving force behind Colour Fits A Digital Agency, an award-winning digital marketing firm.</p>
+                    <h2>Entrepreneur Weekly - DailyHunt</h2>
+                    <p>Kawaljeet Singh is a distinguished young entrepreneur, celebrated for his groundbreaking contributions to the business world. As the visionary founder of Colour Fits A Digital Agency, an award-winning digital marketing firm, he has set new standards with his innovative strategies. Recently featured on DailyHunt, Kawaljeet and his company are making waves for their remarkable impact and leadership in the digital marketing industry.</p>
                 </div>
                 <a href="#img2">
                     <img src="News-2.png" alt="News Article 2" class="about-img">
@@ -381,8 +525,8 @@
                     <img src="Google-Certificate.png" alt="Certificate of Achievement" class="about-img">
                 </a>
                 <div class="about-text">
-                    <h2>Google Partner - Certificate of Achievement</h2>
-                    <p>This certificate is proudly presented to Kawaljeet Singh for his successful partnership with Google.</p>
+                    <h2>Certificate of Achievement</h2>
+                    <p>This certificate is proudly awarded to Kawaljeet Singh for his exemplary achievement as a Google Partner, showcasing his dedication to excellence and innovation in the digital realm.</p>
                 </div>
             </div>
             <div class="team">
