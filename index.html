@@ -19,28 +19,26 @@
     <title>ColourFit - Best Marketing Agency</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="Logo-final.png" alt="Colour Fits Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#container">Services</a></li>
-                <li><a href="#">Clients</a></li>
-                <li><a href="#">Why Colourfit?</a></li>
-                <li><a href="aboutus.html">AboutUs</a></li>
-                <li><a href="contactus.html">Contactus</a></li>
-            </ul>
-            <button class="chat-now">Chat Now</button>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
-    
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="Logo-final.png" alt="Colour Fits Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#features">Services</a></li>
+            <li><a href="#clients">Clients</a></li>
+            <li><a href="#">Why Colourfit?</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <button class="chat-now">Chat Now</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
     // Client section scroll interaction
@@ -88,7 +86,7 @@
         <style>
            .hero {
             position: relative;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             background: none; /* No background */
             color: black;
@@ -112,7 +110,7 @@
         .hero h1 {
             font-size: 70px;
             line-height: 1.2;
-            background: -webkit-linear-gradient(#455AB1, #A269DA);
+            background: -webkit-linear-gradient(#2645c4, #904bd5);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 700;
@@ -257,7 +255,7 @@
 
         <section class="hero">
             <h1>Difficult to Grow <br>Your <span class="highlight">Business?</span></h1>
-            <p>3+ years | 50+ Brands | 35+ Crore Ad spent<br>A dedicated team of specialists, delivering remarkable work to our clients worldwide!</p>
+            <p>5+ years | Scale Your E-Commerce Brand From 10-20 LAKHS to 1 CRORE<br>A dedicated team of specialists, delivering remarkable work to our clients worldwide!</p>
             <button class="ctar">Book a Strategy Call</button>
             <p>Our Performance Marketing Services are Certified by</p>
     
@@ -300,6 +298,7 @@
 
         </section>
         <section class="features-section flex flex-col items-center justify-center transition-all rounded-30 bg-white py-40" id="features">
+            <div class="about-item hidden">
             <div class="content-wrapper w-full relative flex flex-col items-center justify-center gap-20 p-10 border-bottom border-black-10">
                 <figure class="w-full relative">
                     <img loading="lazy" width="47" height="47" src="new.svg" alt="features">
@@ -313,7 +312,7 @@
                     <!-- Service Box 1 -->
                     <div class="service-box flex flex-col items-center text-center mb-30">
                         <div class="iconbox-icon-container text-40 text-primary">
-                            <img src="marketing.png" alt="Strategic Marketing" />
+                            <img src="marketing-removebg-preview.png" alt="Strategic Marketing" />
                         </div>
                         <div class="content">
                             <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
@@ -341,7 +340,7 @@
                         <!-- Service Box 1 -->
                         <div class="service-box flex flex-col items-center text-center mb-30">
                             <div class="iconbox-icon-container text-40 text-primary">
-                                <img src="png-transparent-solution-solve-hands-business-gear-work-finance-business-icon-thumbnail.png" alt="Strategic Marketing" />
+                                <img src="png-transparent-solution-solve-hands-business-gear-work-finance-business-icon-thumbnail-removebg-preview.png" alt="Strategic Marketing" />
                             </div>
                             <div class="content">
                                 <h3 class="iconbox-heading text-16 mb-0/7em leading-1em">
@@ -398,6 +397,7 @@
         
 
  <section>
+    <div class="about-item hidden">
     <div class="container">
         <div class="image-box">
             <img src="Startgic Marketing.gif" alt="Uploaded Image">
@@ -901,88 +901,65 @@ p {
 
 </style>
 
-<div class="testimonial-container">
+<div class="testimonial-container" id="clients">
+    <div class="about-item hidden">
     <div class="testimonial-title">Clients</div>
     <div class="clients-section">
         <div class="client-row">
             <div class="client-text">
                 <span class="badge2">60 Lakhs+ Sales Generated in 60 Days</span>
-                <p>Mrs. Sandeep Kaur, a 24-year-old young business owner, runs a women's wear brand named Annath Fashion Colour Fits Help him to make a brand and generate 60 lakhs+ sales in the last 2 months.
-                    
-                    </p>
+                <p>Mrs. Sandeep Kaur, a 24-year-old young business owner, runs a women's wear brand named Annath Fashion Colour Fits Help him to make a brand and generate 60 lakhs+ sales in the last 2 months.</p>
             </div>
             <div class="client-image">
                 <img src="Annath-Fashion-Express-(Mrs.png" alt="Client 1">
             </div>
         </div>
-    <div class="clients-section">
         <div class="client-row">
             <div class="client-image">
                 <img src="Brands-in-Hands-(Prince-Malik).png" alt="Client 2">
             </div>
             <div class="client-text">
-                <span class="badge2">Generate daily 30-40 pairs sale
-                </span>
-                <p>Colour Fits Helps Brands in Hands to generate a good sale in branded shoes like: Skechers, Puma, Reebok, Nike, etc.. and make a strong presence on social media.  </p>
+                <span class="badge2">Generate daily 30-40 pairs sale</span>
+                <p>Colour Fits Helps Brands in Hands to generate a good sale in branded shoes like: Skechers, Puma, Reebok, Nike, etc.. and make a strong presence on social media.</p>
             </div>
         </div>
-    <div class="clients-section">
         <div class="client-row">
             <div class="client-text">
-                <span class="badge2">Generate 1000+ leads per day
-                </span>
-                <p>Meet Dhruv Bansal, a young entrepreneur and CEO of Colourfit Roofing. They deal in all types of materials for roofing. Colour Fits a digital agency helps him to generate quality leads and give a quality branding for publicity.
-
-                </p>
+                <span class="badge2">Generate 1000+ leads per day</span>
+                <p>Meet Dhruv Bansal, a young entrepreneur and CEO of Colourfit Roofing. They deal in all types of materials for roofing. Colour Fits a digital agency helps him to generate quality leads and give a quality branding for publicity.</p>
             </div>
             <div class="client-image">
                 <img src="Colourfit-Roofing-(Mr.png" alt="Client 3">
             </div>
         </div>
-    <div class="clients-section">
         <div class="client-row">
             <div class="client-image">
                 <img src="Desiiety-Fashion-By-Prisha-(Mrs.png" alt="Client 4">
             </div>
             <div class="client-text">
-                <span class="badge2">Generate Daily 120-150 Orders on E-Commerce Platform
-
-                </span>
-                <p >Colour Fits A digital agency helps Desiiety Fshion by Prisha to generate 120-150 orders on e-commerce platforms like Amazon, Flipkart, and Myntra. We are providing them with a premium market palace to sell their product.
-
-
-                </p>
+                <span class="badge2">Generate Daily 120-150 Orders on E-Commerce Platform</span>
+                <p>Colour Fits A digital agency helps Desiiety Fashion by Prisha to generate 120-150 orders on e-commerce platforms like Amazon, Flipkart, and Myntra. We are providing them with a premium marketplace to sell their product.</p>
             </div>
         </div>
-    <div class="clients-section">
         <div class="client-row">
             <div class="client-text">
-                <span class="badge2">Conversion Rate Increased 50% on Flat Sale
-                </span>
-                <p>Mr. Saurabh gets 50% growth in their flat booking with Colour Fits Magic Touch; we provide 15000+ quality leads to increased conversion.
-                </p>
+                <span class="badge2">Conversion Rate Increased 50% on Flat Sale</span>
+                <p>Mr. Saurabh gets 50% growth in their flat booking with Colour Fits Magic Touch; we provide 15000+ quality leads to increased conversion.</p>
             </div>
             <div class="client-image">
                 <img src="Fincastle-Residency-(CEO-–-Saurabh-M.png" alt="Client 5">
             </div>
         </div>
-    <div class="clients-section">
         <div class="client-row">
             <div class="client-image">
                 <img src="Manglam-Studies-(Aman-Kumar).png" alt="Client 6">
             </div>
             <div class="client-text">
-                <span class="badge2">Generated 10,000 Quality Leads
-                </span>
-                <p >Aman Kumar, the brain behind Mangalam Studies, teamed up with Colour Fits to make a strong presence on social media and get their business to the next level. Colour Fits give him all the digital needs for their business growth.</p>
+                <span class="badge2">Generated 10,000 Quality Leads</span>
+                <p>Aman Kumar, the brain behind Mangalam Studies, teamed up with Colour Fits to make a strong presence on social media and get their business to the next level. Colour Fits give him all the digital needs for their business growth.</p>
             </div>
         </div>
     </div>
-</div>
-</div>
-</div>      </div>
-</div>
-</div>
 </div>
 
 <script>
@@ -1008,6 +985,7 @@ p {
     });
 </script>
 <div class="onboarding-section">
+    <div class="about-item hidden">
     <div class="onboarding-wrapper">
         <div class="text-content">
             <div class="header">
@@ -1042,6 +1020,7 @@ p {
             <img src="daily-payment1.jpg" alt="Daily Payments">
         </div>
     </div>
+</div>
 </div>
 
 <style>
@@ -1250,88 +1229,120 @@ p {
 </style>
 
 <section class="testimonials-and-logos">
-    <h9>
-        <img src="avatar1.png" alt="Icon" class="heading-icon">
-        Hear from them
-    </h9>
-    <div class="testimonial-cards">
-        <div class="testimonial-card">
-            <div class="testimonial-content">
-                <p>Naman Deshmukh effortlessly launched his course to stardom with Colourfit's magic touch</p>
+    <div class="about-item hidden">
+        <h9>
+            <img src="avatar1.png" alt="Icon" class="heading-icon">
+            Hear from them
+        </h9>
+        <div class="testimonial-cards">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>Lets hear from CEO:- Aman Kumar From Manglam Studies ✅</p>
+                </div>
+                <div class="video-container">
+                    <video id="video1" width="100%" controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div class="video-container">
-                <video id="video1" width="100%" controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-        <div class="testimonial-card">
-            <div class="testimonial-content">
-                <p>Rahul Raz worked his astrological wonders with Colourfit's magic touch</p>
-            </div>
-            <div class="video-container">
-                <video id="video2" width="100%" controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-        </div>
-    </div>
-    <div class="logo-section left-to-right">
-        <h3>Our Partners</h3>
-        <div class="logo-container">
-            <div class="logo-wrapper">
-                <!-- Logos 1-8 -->
-                <div class="logo-item"><img src="1.png" alt="Company 1"></div>
-                <div class="logo-item"><img src="2.png" alt="Company 2"></div>
-                <div class="logo-item"><img src="3.png" alt="Company 3"></div>
-                <div class="logo-item"><img src="4.png" alt="Company 4"></div>
-                <div class="logo-item"><img src="5.png" alt="Company 5"></div>
-                <div class="logo-item"><img src="6.png" alt="Company 6"></div>
-                <div class="logo-item"><img src="7.png" alt="Company 7"></div>
-                <div class="logo-item"><img src="8.png" alt="Company 8"></div>
-                <!-- Repeat items to ensure continuous scrolling -->
-                <div class="logo-item"><img src="1.png" alt="Company 1"></div>
-                <div class="logo-item"><img src="2.png" alt="Company 2"></div>
-                <div class="logo-item"><img src="3.png" alt="Company 3"></div>
-                <div class="logo-item"><img src="4.png" alt="Company 4"></div>
-                <div class="logo-item"><img src="5.png" alt="Company 5"></div>
-                <div class="logo-item"><img src="6.png" alt="Company 6"></div>
-                <div class="logo-item"><img src="7.png" alt="Company 7"></div>
-                <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>Be The Next One You to Share Your Feedback.</p>
+                </div>
+                <div class="photo-container">
+                    <img src="Next-One.png" alt="Feedback">
+                </div>
             </div>
         </div>
-    </div>
+        <div class="logo-section left-to-right">
+            <h3>Our Clients</h3>
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <!-- Logos 1-8 -->
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="1.png" alt="Company 1"></div>
+                    <div class="logo-item"><img src="2.png" alt="Company 2"></div>
+                    <div class="logo-item"><img src="3.png" alt="Company 3"></div>
+                    <div class="logo-item"><img src="4.png" alt="Company 4"></div>
+                    <div class="logo-item"><img src="5.png" alt="Company 5"></div>
+                    <div class="logo-item"><img src="6.png" alt="Company 6"></div>
+                    <div class="logo-item"><img src="7.png" alt="Company 7"></div>
+                    <div class="logo-item"><img src="8.png" alt="Company 8"></div>
+                </div>
+            </div>
+        </div>
 
-    <div class="logo-section right-to-left">
-        <div class="logo-container">
-            <div class="logo-wrapper">
-                <!-- Logos 9-16 -->
-                <div class="logo-item"><img src="9.png" alt="Company 9"></div>
-                <div class="logo-item"><img src="10.png" alt="Company 10"></div>
-                <div class="logo-item"><img src="11.png" alt="Company 11"></div>
-                <div class="logo-item"><img src="12.png" alt="Company 12"></div>
-                <div class="logo-item"><img src="13.png" alt="Company 13"></div>
-                <div class="logo-item"><img src="14.png" alt="Company 14"></div>
-                <div class="logo-item"><img src="15.png" alt="Company 15"></div>
-                <div class="logo-item"><img src="16.png" alt="Company 16"></div>
-                <!-- Repeat items to ensure continuous scrolling -->
-                <div class="logo-item"><img src="9.png" alt="Company 9"></div>
-                <div class="logo-item"><img src="10.png" alt="Company 10"></div>
-                <div class="logo-item"><img src="11.png" alt="Company 11"></div>
-                <div class="logo-item"><img src="12.png" alt="Company 12"></div>
-                <div class="logo-item"><img src="13.png" alt="Company 13"></div>
-                <div class="logo-item"><img src="14.png" alt="Company 14"></div>
-                <div class="logo-item"><img src="15.png" alt="Company 15"></div>
-                <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+        <div class="logo-section right-to-left">
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <!-- Logos 9-16 -->
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                    <!-- Repeat items to ensure continuous scrolling -->
+                    <div class="logo-item"><img src="9.png" alt="Company 9"></div>
+                    <div class="logo-item"><img src="10.png" alt="Company 10"></div>
+                    <div class="logo-item"><img src="11.png" alt="Company 11"></div>
+                    <div class="logo-item"><img src="12.png" alt="Company 12"></div>
+                    <div class="logo-item"><img src="13.png" alt="Company 13"></div>
+                    <div class="logo-item"><img src="14.png" alt="Company 14"></div>
+                    <div class="logo-item"><img src="15.png" alt="Company 15"></div>
+                    <div class="logo-item"><img src="16.png" alt="Company 16"></div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
 <style>
-.testimonials-and-logos {
+    .testimonials-and-logos {
     max-width: 1100px;
     margin: 20px auto;
     padding: 20px;
@@ -1369,16 +1380,15 @@ h9 {
 
 .testimonial-cards {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: space-between;
 }
 
 .testimonial-card {
     background-color: #ffffff;
     border-radius: 15px;
-    max-width: 490px;
-    width: 100%;
+    width: calc(50% - 20px);
     overflow: hidden;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1408,59 +1418,66 @@ h9 {
     margin: 10px 0;
 }
 
-.video-container {
+.video-container,
+.photo-container {
     padding: 0 20px 20px;
     background-color: #f9f9f9;
 }
 
-video {
+video,
+.photo-container img {
     width: 100%;
     border-radius: 10px;
     border: 1px solid #ddd;
 }
 
+.photo-container img {
+    height: auto; /* Ensure the image maintains its aspect ratio */
+    object-fit: cover;
+}
+
 .logo-section {
     margin-top: 40px;
-    text-align: center; /* Center align header and icon */
+    text-align: center;
 }
 
 .logo-section h3 {
     color: #4a4a4a;
-    font-size: 2em; /* Increased header size */
+    font-size: 2em;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .logo-container {
     position: relative;
-    height: 80px; /* Reduced height */
+    height: 80px;
     overflow: hidden;
-    background: none; /* Remove background */
+    background: none;
 }
 
 .logo-wrapper {
     display: flex;
     flex-wrap: nowrap;
-    width: 200%; /* Adjusted width for smoother continuous effect */
+    width: 200%;
 }
 
 .logo-item {
     flex: 0 0 auto;
-    width: 160px; /* Reduced width */
-    height: 90px; /* Reduced height */
+    width: 160px;
+    height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 15px; /* Adjusted space between logos */
-    background: none; /* Remove background */
-    box-shadow: none; /* Removed shadow */
-    padding: 5px; /* Padding around logos */
-    border-radius: 10px; /* Rounded corners */
+    margin-right: 15px;
+    background: none;
+    box-shadow: none;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .logo-item img {
-    width: 100%; /* Ensure the image fits within the logo item */
-    height: 100%; /* Ensure the image fits within the logo item */
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
@@ -1483,55 +1500,56 @@ video {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(50%);
     }
 }
 
 .left-to-right .logo-wrapper {
-    animation: scroll-left-to-right 20s linear infinite;
+    animation: scroll-left-to-right 30s linear infinite;
 }
 
 .right-to-left .logo-wrapper {
-    animation: scroll-right-to-left 20s linear infinite;
+    animation: scroll-left-to-right 30s linear infinite;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .logo-container {
-        height: 60px; /* Adjusted height for smaller screens */
-    }
-
-    .logo-wrapper {
-        width: 300%; /* Adjusted width for smoother continuous effect on smaller screens */
-    }
-
-    .logo-item {
-        width: 120px; /* Adjusted width */
-        height: 70px; /* Adjusted height */
-        margin-right: 10px; /* Adjusted space between logos */
-    }
-
-    h9 {
-        font-size: 2em; /* Adjusted font size */
+/* Media Query for screens 490px and below */
+@media screen and (max-width: 490px) {
+    .testimonial-card {
+        width: 100%; /* Full width for smaller screens */
+        margin: 10px 0; /* Adjust margin */
     }
 
     .testimonial-cards {
         flex-direction: column;
-    }
-
-    .testimonial-card {
-        max-width: 100%;
+        align-items: center;
     }
 
     .logo-section h3 {
-        font-size: 1.5em; /* Adjusted header size */
+        font-size: 1.5em; /* Adjust header size for smaller screens */
+    }
+
+    .logo-container {
+        height: 60px; /* Adjust height for smaller screens */
+    }
+
+    .logo-item {
+        width: 120px; /* Adjust width for smaller screens */
+        height: 60px; /* Adjust height for smaller screens */
+    }
+
+    .heading-icon {
+        width: 40px; /* Adjust icon size for smaller screens */
+        height: 40px; /* Adjust icon size for smaller screens */
     }
 }
+
 </style>
+
 
 
        
 <div class="agency-container">
+   
     <div class="agency-floating-avatar">
         <img src="avatar21.png" alt="Avatar" class="agency-avatar">
     </div>
@@ -1558,6 +1576,7 @@ video {
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <style>
@@ -1725,19 +1744,21 @@ document.addEventListener('DOMContentLoaded', function() {
             <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram">
                 <i class="fab fa-instagram"></i>
             </a>
-            <a href="https://twitter.com/yourcompany" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
+            <a href="https://www.facebook.com/yourcompany" target="_blank" aria-label="Facebook">
+                <i class="fab fa-facebook"></i>
             </a>
         </div>
+        
     </div>
 </footer>
 <style>
-    /* Footer Styles */
+   
+/* Footer Styles */
 .footer {
-    background-color: #ecf9ff; /* White background color */
+    background: linear-gradient(to right, #bfb3cc, #7697cf);
     color: #292A43; /* Text color */
     padding: 40px 20px; /* Increased height and padding */
-
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1754,6 +1775,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .footer-text p {
+    color: white;
     margin: 10px 0; /* Spacing above and below text */
     font-size: 18px; /* Larger font size for copyright text */
     font-weight: 400; /* Normal font weight */
@@ -1767,7 +1789,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }
 
 .footer-socials a {
-    color: #292A43; /* Icon color */
+    color: #ffffff; /* Icon color */
     font-size: 30px; /* Size of social media icons */
     transition: color 0.3s, transform 0.3s; /* Transition effects */
 }
@@ -1779,42 +1801,124 @@ document.addEventListener('DOMContentLoaded', function() {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .footer-logo img {
-        max-width: 150px; /* Adjust logo size for smaller screens */
+    .about-item, .about-item.reverse {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .footer-text p {
-        font-size: 16px; /* Adjust font size */
+    .about-img, .about-text {
+        width: 100%;
+        padding: 0;
     }
 
-    .footer-socials a {
-        font-size: 28px; /* Adjust icon size */
+    .about-item.reverse .about-img {
+        order: 2;
     }
 }
 
 @media (max-width: 490px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 2.5em;
+    }
+
+    .header p {
+        font-size: 1.1em;
+    }
+
+    .about-item {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .about-img, .about-text {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-img {
+        max-width: 100%;
+    }
+
+    .team img {
+        max-width: 100%;
+    }
+
     .footer {
-        padding: 30px 10px; /* Adjust padding for very small screens */
+        padding: 30px 10px;
     }
 
     .footer-logo img {
-        max-width: 120px; /* Further reduce logo size */
+        max-width: 120px;
     }
 
     .footer-text p {
-        font-size: 14px; /* Reduce font size */
+        font-size: 14px;
     }
 
     .footer-socials {
-        gap: 15px; /* Reduce spacing between icons */
+        gap: 15px;
     }
 
     .footer-socials a {
-        font-size: 24px; /* Further reduce icon size */
+        font-size: 24px;
+    }
+}
+/* Add this CSS to your existing CSS */
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__slideInUp {
+    animation-name: slideInUp;
+}
+
+/* Ensure elements are hidden initially */
+.hidden {
+    opacity: 0;
+}
+
+
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('.hidden');
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__slideInUp');
+                    entry.target.classList.remove('hidden');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+    
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
+    
 
 </body>
 </html>

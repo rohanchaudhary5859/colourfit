@@ -16,26 +16,24 @@
     <title>ColourFit - Best Marketing Agency</title>
 </head>
 
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="Logo-final.png" alt="Colour Fits Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Clients</a></li>
-                <li><a href="#">Why Colourfit?</a></li>
-                <li><a href="#">AboutUs</a></li>
-                <li><a href="contactus.html">Contactus</a></li>
-            </ul>
-            <button class="chat-now">Chat Now</button>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="Logo-final.png" alt="Colour Fits Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+        </ul>
+        <button class="chat-now">Chat Now</button>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+</header>
     
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -88,6 +86,10 @@
     box-sizing: border-box;
     font-family: 'Golos Text', sans-serif;
 }
+.body
+{
+    background: url(BG.png);
+}
 
 /* Navigation bar styles */
 nav {
@@ -118,7 +120,7 @@ nav {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     margin: 0 auto; /* Center the nav links horizontally */
 }
 
@@ -218,8 +220,7 @@ nav {
     }
 }
 
-
-    .container {
+.container {
     max-width: 1110px;
     margin: 0 auto;
     padding: 20px;
@@ -236,21 +237,32 @@ nav {
 }
 
 .header h1 {
+    color: rgb(255, 255, 255);
     font-size: 3em;
     margin-top: 70px;
 }
+
+.header p {
+    font-size: 1em;
+    margin-top: 40px;
+    line-height: 1.5; /* Add line-height for spacing between text lines */
+}
+
 .about-text h2 {
     font-size: 2.5em;
     margin-top: 10px;
 }
-.header p {
-    font-size: 1.2em;
-    margin-top: 40px;
+
+.about-text h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
 }
+
 .about-text p {
     font-size: 1.0em;
     margin-top: 50px;
     color: black;
+    line-height: 1.5; /* Add line-height for spacing between text lines */
 }
 
 .about-item {
@@ -308,7 +320,7 @@ nav {
 
 .about-text {
     width: 60%;
-margin: 20px;
+    margin: 20px;
     padding: 0 20px;
 }
 
@@ -378,7 +390,7 @@ margin: 20px;
 
 /* Footer Styles */
 .footer {
-    background-color: #ecf9ff; /* White background color */
+    background: linear-gradient(to right, #bfb3cc, #7697cf);
     color: #292A43; /* Text color */
     padding: 40px 20px; /* Increased height and padding */
     margin-top: 20px;
@@ -490,37 +502,78 @@ margin: 20px;
     .footer-socials a {
         font-size: 24px;
     }
+}.about-text h2, .about-text h3 {
+    background: -webkit-linear-gradient(#2645c4, #904bd5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
 }
+/* Add this CSS to your existing CSS */
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.animate__slideInUp {
+    animation-name: slideInUp;
+}
+
+/* Ensure elements are hidden initially */
+.hidden {
+    opacity: 0;
+}
+
+
 
     </style>
 </head>
 <body>
     <section class="header">
-        <h1>About Colour - A Digital Agency</h1>
+        <h1>About Colour Fits A Digital Agency</h1>
         <p>Discover the milestones and achievements of Colour Fits A Digital Agency and its founder, Kawaljeet Singh.</p>
     </section>
 
     <section class="about">
         <div class="container">
-            <div class="about-item">
+            <div class="about-item hidden">
+                <a href="#img1">
+                    <img src="Kawaljeet-Singh.png" alt="News Article 1" class="about-img">
+                </a>
+                <div class="about-text">
+                    <h3>Meet Kawaljeet Singh, a self-made digital entrepreneur who founded Colour Fits A Digital Agency & Glow Way Production Pvt. Ltd. He hosts the TV reality show Generation Of Ideals.</h2>
+                    <p>Kawaljeet Singh is a distinguished young entrepreneur renowned for his innovative contributions to the business world. He is the driving force behind Colour Fits A Digital Agency, an award-winning digital marketing firm celebrated for its cutting-edge strategies and impactful campaigns. Under Singh’s leadership, the agency has achieved significant industry recognition, underscoring his expertise in navigating the digital landscape and delivering exceptional results for clients. In addition to his success in digital marketing, Singh serves as the director of Glow Way Production Pvt Ltd, where he applies his creative vision to the media sector, overseeing a range of compelling projects that highlight his versatility and strategic acumen. Singh is also the creator and host of the TV reality show "Generation of Ideas," a platform dedicated to showcasing and nurturing young entrepreneurial talent. This show reflects his commitment to fostering innovation and supporting emerging talent, providing a valuable opportunity for new ideas to shine. Through these ventures, Kawaljeet Singh continues to make a significant impact across multiple industries.</p>
+                </div>
+            </div>
+            <div class="about-item hidden">
                 <a href="#img1">
                     <img src="News-1.png" alt="News Article 1" class="about-img">
                 </a>
                 <div class="about-text">
-                    <h2>Business Times</h2>
+                    <h2> Feature in ZEE Business</h2>
                     <p>Introducing Kawaljeet Singh, a visionary digital entrepreneur behind Colour Fits A Digital Agency and Glow Way Production Pvt. Ltd. As the host of Generation Of Ideals, he mentors emerging talents. His award-winning agency is celebrated for its innovative digital marketing strategies. Tune in to Zee Business to explore his journey and impactful contributions to the digital world.</p>
                 </div>
             </div>
             <div class="about-item reverse">
                 <div class="about-text">
-                    <h2>Entrepreneur Weekly - DailyHunt</h2>
+                    <h2>Feature in DailyHunt</h2>
                     <p>Kawaljeet Singh is a distinguished young entrepreneur, celebrated for his groundbreaking contributions to the business world. As the visionary founder of Colour Fits A Digital Agency, an award-winning digital marketing firm, he has set new standards with his innovative strategies. Recently featured on DailyHunt, Kawaljeet and his company are making waves for their remarkable impact and leadership in the digital marketing industry.</p>
                 </div>
                 <a href="#img2">
                     <img src="News-2.png" alt="News Article 2" class="about-img">
                 </a>
             </div>
-            <div class="about-item">
+            <div class="about-item hidden">
                 <a href="#img3">
                     <img src="Google-Certificate.png" alt="Certificate of Achievement" class="about-img">
                 </a>
@@ -564,19 +617,41 @@ margin: 20px;
             <p>&copy; 2024 Colour Fits A Digital Agency</p>
         </div>
         <div class="footer-socials">
-            <a href="https://www.linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="https://twitter.com/yourcompany" target="_blank" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
-        </div>
+    <a href="https://www.linkedin.com/company/yourcompany" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://www.instagram.com/yourcompany" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/yourcompany" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook"></i>
+    </a>
+</div>
+
     </div>
 </footer>
-
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const elements = document.querySelectorAll('.hidden');
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__animated', 'animate__slideInUp');
+                    entry.target.classList.remove('hidden');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+    
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+    </script>
+    
 
 </body>
 </html>

@@ -133,10 +133,11 @@ nav {
 /* Full-screen hero section with background image */
 /* General Styles */
 body {
+    background: url(BG.png);
     background-size: cover; /* Ensure the image covers the whole page */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     background-position: center center; /* Center the image */
-    color: #333;
+    
 }
 .features-section {
     background-color: #ffffff;
